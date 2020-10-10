@@ -4,5 +4,6 @@ pkgs.mkShell {
     shellcheck
     nix-linter
     nixpkgs-fmt
+    pre-commit
   ];
 }

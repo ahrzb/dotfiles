@@ -239,4 +239,3 @@ in {
   # changes in each release.
   home.stateVersion = "20.03";
 }
-

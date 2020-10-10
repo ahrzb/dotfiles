@@ -7,4 +7,3 @@ cd "$(dirname "$0")" || {
 
 ln --no-target-directory --symbolic "$PWD/nixpkgs" "$HOME/.config/nixpkgs"
 ln --no-target-directory --symbolic "$PWD/doom.d" "$HOME/.doom.d"
-
