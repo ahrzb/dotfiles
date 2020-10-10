@@ -127,6 +127,7 @@ in {
     texlive.combined.scheme-full
     inkscape
     calibre
+    skype
 
     steam
     warzone2100
