@@ -229,6 +229,13 @@ in {
     '')
   ];
 
+  home.file.".s3cfg".source = pkgs.writeText "s3cfg" ''
+    [default]
+    access_key = ${secrets.s3cmd.access_key}
+    secret_key = ${secrets.s3cmd.secret_key}
+    host_base = ${secrets.s3cmd.host_base}
+  '';
+
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
