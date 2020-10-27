@@ -232,9 +232,10 @@ in {
 
   home.file.".s3cfg".source = pkgs.writeText "s3cfg" ''
     [default]
+    host_base = ${secrets.s3cmd.host_base}
+    host_bucket = ${secrets.s3cmd.host_bucket}
     access_key = ${secrets.s3cmd.access_key}
     secret_key = ${secrets.s3cmd.secret_key}
-    host_base = ${secrets.s3cmd.host_base}
   '';
 
   # This value determines the Home Manager release that your
