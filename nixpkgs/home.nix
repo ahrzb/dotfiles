@@ -74,8 +74,8 @@ in {
         {
           name = "gc-excelviewer";
           publisher = "GrapeCity";
-          version = "3.0.39";
-          sha256 = "1c2pd7lib6plxd1hs6ry3vag1cp8ym6qn09dijqsav04p9787ph8";
+          version = "3.0.40";
+          sha256 = "07f3mkrncp13arbiijchwmg95vz0z91wsp53kpfz2pdfp6wqpid3";
         }
         {
           name = "nix-env-selector";
@@ -84,10 +84,16 @@ in {
           sha256 = "1n5ilw1k29km9b0yzfd32m8gvwa2xhh6156d4dys6l8sbfpp2cv9";
         }
         {
-          name = "Nix";
-          publisher = "bbenoist";
-          version = "1.0.1";
-          sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
+          name = "toml";
+          publisher = "be5invis";
+          version = "0.5.1";
+          sha256 = "1r1y6krqw5rrdhia9xbs3bx9gibd1ky4bm709231m9zvbqqwwq2j";
+        }
+        {
+          name = "vscode-html-css";
+          publisher = "ecmel";
+          version = "1.1.2";
+          sha256 = "099085ky7ic0xf8jbdfpjgn8fab3dgjkrr9rjbn7qqwidhqxb218";
         }
       ];
   };
