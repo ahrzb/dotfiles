@@ -2,7 +2,7 @@
   allowUnfree = true;
 
   packageOverrides = pkgs: {
-    python3 = pkgs.python3.override {
+    python38 = pkgs.python38.override {
       packageOverrides = python-self: python-super: {
         PyHTML = python-self.buildPythonPackage rec {
           pname = "PyHTML";

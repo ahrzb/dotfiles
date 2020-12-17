@@ -140,9 +140,10 @@ in {
     kdeApplications.spectacle
     kdeApplications.gwenview
 
-    (python3.withPackages (ps:
+    (python38.withPackages (ps:
       with ps; [
         virtualenv
+        pydub
         ipython
         jupyter
         ipywidgets
@@ -152,16 +153,24 @@ in {
         thinc
         scikitlearn
         pytorch
+        pillow
         joblib
         tqdm
         pydub
         matplotlib
+        pycairo
         seaborn
-        boto3
+        boto
         beautifulsoup4
         requests
         PyHTML
+        w3lib
       ]))
+    poetry
+    pyprof2calltree
+    kcachegrind
+    black
+
     nodejs
     clojure
     leiningen
