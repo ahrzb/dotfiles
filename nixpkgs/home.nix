@@ -134,10 +134,13 @@ in {
     inkscape
     calibre
     skype
+    discord
+    slack
 
     steam
     warzone2100
 
+    kdeconnect
     kdeApplications.ksudoku
     kdeApplications.okular
     kdeApplications.ark
@@ -145,6 +148,9 @@ in {
     kdeApplications.kcalc
     kdeApplications.spectacle
     kdeApplications.gwenview
+    plasma5.plasma-browser-integration
+
+    godot
 
     (python38.withPackages (ps:
       with ps; [
@@ -178,39 +184,48 @@ in {
     black
 
     nodejs
+
     clojure
     leiningen
-    kubectl
-    dvc
+    babashka
+    lumo
 
+    julia
+
+    nixfmt
+    nix-prefetch-git
+
+    valgrind
+
+    kubectl
     docker-compose
     vagrant
 
     gron
     pup
-    csvkit
+    rq
+    aha
 
     httpie
+    youtube-dl
     s3cmd
 
+    wineFull
     ranger
     sshfs
+    rsync
+    rclone
     mosh
+    byobu
     hyperfine
     parallel
     pv
     ripgrep
     fd
     entr
-    byobu
-    rsync
     ffmpeg
     ansible
-    gcc
     tree
-
-    nixfmt
-    nix-prefetch-git
 
     pandoc
     k2pdfopt
