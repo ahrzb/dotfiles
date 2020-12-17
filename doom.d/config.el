@@ -55,7 +55,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(use-package! direnv
-  :straight t
-  :custom (direnv-always-show-summary nil)
-  :config (direnv-mode))
