@@ -1,6 +1,10 @@
 {
   allowUnfree = true;
 
+  permittedInsecurePackages = [
+    "mupdf-1.17.0"
+  ];
+
   packageOverrides = pkgs: {
     python38 = pkgs.python38.override {
       packageOverrides = python-self: python-super: {
