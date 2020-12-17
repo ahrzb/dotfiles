@@ -34,7 +34,7 @@ in {
   programs.git = {
     enable = true;
     userName = "Amirhossein Rouzbahani";
-    userEmail = "ahrzb@cafebazaar.ir";
+    userEmail = "ahrzb5@gmail.com";
     aliases = {
       co = "checkout";
       unstage = "reset HEAD --";
