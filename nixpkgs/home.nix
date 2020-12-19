@@ -65,12 +65,21 @@ in {
   };
   programs.vscode = {
     enable = true;
+    userSettings = {
+      vim.highlightedyank.enable = true;
+    };
     extensions = with pkgs.vscode-extensions;
       [
         ms-python.python
         ms-vscode-remote.remote-ssh
         ms-kubernetes-tools.vscode-kubernetes-tools
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "vim";
+          publisher = "vscodevim";
+          version = "1.18.5";
+          sha256 = "0cbmmhkbr4f1afk443sgdihp2q5zkzchbr2yhp7bm5qnv7xdv5l4";
+        }
         {
           name = "gc-excelviewer";
           publisher = "GrapeCity";
