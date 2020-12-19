@@ -53,10 +53,7 @@ in {
       AddKeysToAgent yes
     '';
   };
-  programs.firefox = {
-    enable = true;
-    enableAdobeFlash = true;
-  };
+  programs.firefox = { enable = true; };
   programs.chromium = { enable = true; };
   programs.neovim = {
     enable = true;
