@@ -61,7 +61,12 @@ in {
   programs.neovim = {
     enable = true;
     vimAlias = true;
-    plugins = with pkgs.vimPlugins; [ vim-addon-nix ];
+    plugins = with pkgs.vimPlugins; [
+      vim-addon-nix
+      vim-surround
+      vim-commentary
+      vim-indent-object
+    ];
   };
   programs.vscode = {
     enable = true;
