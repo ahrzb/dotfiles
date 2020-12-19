@@ -209,6 +209,8 @@ in {
 
     julia
 
+    go_1_15
+
     nixfmt
     nix-prefetch-git
 
