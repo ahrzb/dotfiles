@@ -120,6 +120,10 @@ in {
   programs.direnv.enable = true;
   programs.dircolors.enable = true;
   programs.go.enable = true;
+  programs.matplotlib = {
+    enable = true;
+    config = { backend = "Qt5Cairo"; };
+  };
 
   services.kdeconnect = {
     enable = true;
