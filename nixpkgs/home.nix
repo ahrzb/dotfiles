@@ -258,6 +258,8 @@ in {
     parastoo-fonts
     emacs-all-the-icons-fonts
 
+    sqlite
+
     (pkgs.writeShellScriptBin "chatterbox" ''
       	    export LD_LIBRARY_PATH="${
              pkgs.lib.makeLibraryPath [ stdenv.cc.cc pkgs.libsndfile ]
