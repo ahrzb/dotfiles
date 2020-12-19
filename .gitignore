@@ -1,1 +1,2 @@
 /nixpkgs/conf/secrets.toml
+/nixpkgs/conf/ssh-hosts.toml

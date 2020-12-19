@@ -1,0 +1,5 @@
+[my-lovely-host]
+hostname = "<hostname>"
+user = "<user>"
+port = 22
+other_conf = "value"
