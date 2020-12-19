@@ -71,7 +71,9 @@ in {
   programs.vscode = {
     enable = true;
     userSettings = {
-      vim.highlightedyank.enable = true;
+      "python.defaultInterpreterPath" = "/home/ahrzb/.nix-profile/bin/python";
+      "files.watcherExclude" = { "**/venv/**" = true; };
+      "vim.highlightedyank.enable" = true;
     };
     extensions = with pkgs.vscode-extensions;
       [
