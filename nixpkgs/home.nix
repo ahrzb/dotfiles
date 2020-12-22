@@ -71,6 +71,12 @@ in {
       "python.defaultInterpreterPath" = "/home/ahrzb/.nix-profile/bin/python";
       "files.watcherExclude" = { "**/venv/**" = true; };
       "vim.highlightedyank.enable" = true;
+      "window.zoomLevel" = 1;
+      "python.analysis.logLevel" = "Information";
+      "python.formatting.provider" = "black";
+      "python.venvPath" = "${builtins.toString ~/.cache/pypoetry/virtualenvs}";
+      "vim.useSystemClipboard" = true;
+      "vim.visualstar" = true;
     };
     extensions = with pkgs.vscode-extensions;
       [
