@@ -223,6 +223,7 @@ in {
     valgrind
 
     kubectl
+    kubetail
     docker-compose
     vagrant
 
