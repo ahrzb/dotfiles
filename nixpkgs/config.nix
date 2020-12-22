@@ -6,6 +6,8 @@
   ];
 
   packageOverrides = pkgs: {
+    kenlm = pkgs.callPackage ./modules/kenlm.nix {};
+
     python38 = pkgs.python38.override {
       packageOverrides = python-self: python-super: {
         PyHTML = python-self.buildPythonPackage rec {
