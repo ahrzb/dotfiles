@@ -18,27 +18,18 @@
       inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
       nixpkgsConfig = {
         config = { allowUnfree = true; };
-        overlays = attrValues overlays
-          ++ singleton (final: prev: { inherit (final.pkgs-x86) nix-index; });
+        overlays = attrValues overlays;
       };
       overlays = {
         extra-pkgs = final: prev: {
-          pkgs-x86 = import inputs.nixpkgs-unstable {
-            system = "x86_64-darwin";
-            config = nixpkgsConfig.config // { allowUnsupportedSystem = true; };
-          };
           pkgs-stable =
             import inputs.nixpkgs { inherit (nixpkgsConfig) config; };
-          pkgs-stable-x86 = import inputs.nixpkgs {
-            system = "x86_64-darwin";
-            config = nixpkgsConfig.config // { allowUnsupportedSystem = true; };
-          };
         };
       };
     in {
       darwinConfigurations = {
-        "darwin-dh" = darwinSystem {
-          system = "aarch64-darwin";
+        "C02G108AML86" = darwinSystem {
+          system = "x86_64-darwin";
           modules = [
             ./darwin
 

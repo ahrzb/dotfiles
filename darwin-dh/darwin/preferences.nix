@@ -16,7 +16,6 @@
 
   services.nix-daemon.enable = true;
   system.keyboard.enableKeyMapping = true;
-  security.pam.enableSudoTouchIdAuth = true;
 
   programs = {
     zsh = {
@@ -38,7 +37,7 @@
     enableFontDir = true;
     fonts = with pkgs; [
       recursive
-      iosevka
+      iosevka-bin
       (nerdfonts.override { fonts = [ "Meslo" ]; })
     ];
   };
