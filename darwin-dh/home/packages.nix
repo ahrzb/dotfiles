@@ -4,6 +4,7 @@
     aws-iam-authenticator # AWS IAM credentials for Kubernetes authentication
     saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
     google-cloud-sdk # Tools for the google cloud platform
+    awscli # Unified tool to manage your AWS services
 
     git # Distributed version control system
     terraform # Tool for building, changing, and versioning infrastructure
