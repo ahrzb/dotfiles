@@ -29,26 +29,6 @@
           tags = [ "from:oh-my-zsh" ];
         }
         {
-          name = "plugins/golang";
-          tags = [ "from:oh-my-zsh" ];
-        }
-        {
-          name = "plugins/emacs";
-          tags = [ "from:oh-my-zsh" ];
-        }
-        {
-          name = "plugins/vim";
-          tags = [ "from:oh-my-zsh" ];
-        }
-        {
-          name = "plugins/iterm2";
-          tags = [ "from:oh-my-zsh" ];
-        }
-        {
-          name = "plugins/vagrant";
-          tags = [ "from:oh-my-zsh" ];
-        }
-        {
           name = "plugins/docker";
           tags = [ "from:oh-my-zsh" ];
         }
@@ -64,7 +44,6 @@
           name = "plugins/z";
           tags = [ "from:oh-my-zsh" ];
         }
-        { name = "zsh-users/zsh-syntax-highlighting"; }
         { name = "changyuheng/fz"; }
       ];
     };
