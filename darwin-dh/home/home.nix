@@ -11,7 +11,7 @@
         lg = "log --oneline --decorate --graph";
       };
       extraConfig = {
-        core.excludesfile = ./dotfiles/git/global.gitignore;
+        core.excludesfile = "${./dotfiles/git/global.gitignore}";
       };
       includes = [
         {
