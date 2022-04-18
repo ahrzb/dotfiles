@@ -6,9 +6,7 @@
     global.noLock = true;
     taps =
       [ "homebrew/bundle" "homebrew/cask" "homebrew/core" "homebrew/services" ];
-    brews = [
-      "julia"
-    ];
+    brews = [ "julia" ];
     casks = [
       "1password"
       "alfred"
