@@ -18,7 +18,6 @@ in {
           logisticsKubernetesRev = mkOption {
             type = types.str;
             description = "logistics-kubernetes repo revision to use";
-            default = "17f024403b8776f71902d3dc1a0da6ae40d04958";
           };
         };
         disableKubeConfigEnv = mkEnableOption "Set KUBECONFIG to /dev/null";
