@@ -3,6 +3,16 @@
     enable = true;
     initExtraFirst = ''
       source ~/.secrets
+
+      function hello-world() {
+        ssh-add --apple-use-keychain &&
+        eval $(op signin --account my.1password.com) &&
+        saml2aws login -a log-prd --mfa-token="$(op item get --otp iam.syslogistics.io)" --skip-prompt &&
+        saml2aws login -a log-stg --mfa-token="$(op item get --otp iam.syslogistics.io)" --skip-prompt &&
+        saml2aws login -a log-shared --mfa-token="$(op item get --otp iam.syslogistics.io)" --skip-prompt &&
+        aws --region eu-west-1 ecr get-login-password --profile log-prd | docker login --username AWS --password-stdin $DH_AWS_ECR_ROOT &&
+        echo "Hello World!"
+      }
     '';
     shellAliases = {
       ll = "ls -l";
