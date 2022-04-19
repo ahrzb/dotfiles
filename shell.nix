@@ -1,9 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> { } }:
 pkgs.mkShell {
-  buildInputs = with pkgs; [
-    shellcheck
-    nix-linter
-    nixpkgs-fmt
-    pre-commit
-  ];
+  buildInputs = with pkgs; [ shellcheck nix-linter nixpkgs-fmt pre-commit ];
 }
