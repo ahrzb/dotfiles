@@ -9,7 +9,8 @@ in {
     deliveryhero = {
       kubernetes = {
         logisticsConsolidatedConfig = {
-          enable = mkEnableOption "Write consolidated kube config to ~/.kube/config";
+          enable =
+            mkEnableOption "Write consolidated kube config to ~/.kube/config";
           logisticsKubernetesRef = mkOption {
             type = types.str;
             default = "master";
@@ -25,23 +26,18 @@ in {
     };
   };
 
-  config =
-    mkMerge [
-      (
-        mkIf (kubeConsolidated.enable) {
-          home.file.".kube/config".text =
-            let repo = builtins.fetchGit {
-              url = "git@github.com:deliveryhero/logistics-kubernetes.git";
-              ref = kubeConsolidated.logisticsKubernetesRef;
-              rev = kubeConsolidated.logisticsKubernetesRev;
-            };
-            in builtins.readFile "${repo}/kubeconfig/consolidated";
-        }
-      )
-      (
-        mkIf (kubeConf.disableKubeConfigEnv) {
-          home.sessionVariables."KUBECONFIG" = "/dev/null";
-        }
-      )
-    ];
+  config = mkMerge [
+    (mkIf (kubeConsolidated.enable) {
+      home.file.".kube/config".text = let
+        repo = builtins.fetchGit {
+          url = "git@github.com:deliveryhero/logistics-kubernetes.git";
+          ref = kubeConsolidated.logisticsKubernetesRef;
+          rev = kubeConsolidated.logisticsKubernetesRev;
+        };
+      in builtins.readFile "${repo}/kubeconfig/consolidated";
+    })
+    (mkIf (kubeConf.disableKubeConfigEnv) {
+      home.sessionVariables."KUBECONFIG" = "/dev/null";
+    })
+  ];
 }
