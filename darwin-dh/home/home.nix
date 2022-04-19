@@ -44,4 +44,15 @@
       enableZshIntegration = true;
     };
   };
+
+  deliveryhero = {
+    email = "amirhossein.roozbahani@deliveryhero.com";
+    kubernetes = {
+      logisticsConsolidatedConfig = {
+        enable = true;
+        logisticsKubernetesRev = "17f024403b8776f71902d3dc1a0da6ae40d04958";
+      };
+      disableKubeConfigEnv = true;
+    };
+  };
 }
