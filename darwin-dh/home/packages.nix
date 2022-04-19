@@ -6,7 +6,6 @@
     google-cloud-sdk # Tools for the google cloud platform
     awscli # Unified tool to manage your AWS services
 
-    git # Distributed version control system
     terraform # Tool for building, changing, and versioning infrastructure
     kubectl # Kubernetes CLI
     kubernetes-helm # A package manager for kubernetes
@@ -14,6 +13,8 @@
     kubetail # Bash script to tail Kubernetes logs from multiple pods at the same time
     k9s # Kubernetes CLI To Manage Your Clusters In Style
 
+    git # Distributed version control system
+    pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
     vagrant # A tool for building complete development environments
     poetry # Python dependency management and packaging made easy
 
