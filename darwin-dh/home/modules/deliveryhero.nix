@@ -7,11 +7,6 @@ let
 in {
   options = {
     deliveryhero = {
-      email = mkOption {
-        type = types.str;
-        example = "example@deliveryhero.com";
-        description = "your @deliveryhero.com email address";
-      };
       kubernetes = {
         logisticsConsolidatedConfig = {
           enable = mkEnableOption "Write consolidated kube config to ~/.kube/config";

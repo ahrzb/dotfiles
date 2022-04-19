@@ -46,7 +46,6 @@
   };
 
   deliveryhero = {
-    email = "amirhossein.roozbahani@deliveryhero.com";
     kubernetes = {
       logisticsConsolidatedConfig = {
         enable = true;
