@@ -1,3 +1,6 @@
 /nixpkgs/conf/secrets.toml
 /nixpkgs/conf/ssh-hosts.toml
 *.pyc
+/result
+/darwin-air/result
+/darwin-dh/result
