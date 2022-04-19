@@ -1,7 +1,10 @@
 { config, pkgs, lib, ... }: {
   home.stateVersion = "22.05";
 
-  home.sessionVariables = { EDITOR = "vim"; };
+  home.sessionVariables = {
+    EDITOR = "vim";
+    LANG = "en_US.UTF-8";
+  };
 
   programs = {
     git = {
