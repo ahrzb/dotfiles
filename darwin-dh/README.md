@@ -5,6 +5,6 @@
 curl -L https://nixos.org/nix/install | sh
 
 # Build and boostrap
-nix build .#darwin-air#darwinConfigurations."AmirHosseins-MacBook-Air".system
+nix build .#darwin-air#darwinConfigurations."C02G108AML86".system
 ./result/sw/bin/darwin-rebuild switch --flake .
 ```
