@@ -47,6 +47,7 @@
     rustup # The Rust toolchain installer
 
     # Nix utilities
+    cachix # Command line client for Nix binary cache hosting https://cachix.org
     nix-diff # Explain why two Nix derivations differ
     nixfmt # An opinionated formatter for Nix
     statix # Lints and suggestions for the nix programming language
