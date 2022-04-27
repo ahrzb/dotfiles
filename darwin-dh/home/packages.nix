@@ -14,6 +14,7 @@
     k9s # Kubernetes CLI To Manage Your Clusters In Style
 
     git # Distributed version control system
+    tig # Text-mode interface for git
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
     vagrant # A tool for building complete development environments
     poetry # Python dependency management and packaging made easy
