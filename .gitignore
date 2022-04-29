@@ -4,3 +4,5 @@
 /result
 /darwin-air/result
 /darwin-dh/result
+/.direnv/
+/.pre-commit-config.yaml

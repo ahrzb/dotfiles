@@ -1,10 +1,11 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 let
   cfg = config.deliveryhero;
   kubeConf = cfg.kubernetes;
   kubeConsolidated = kubeConf.logisticsConsolidatedConfig;
   inherit (lib) types mkEnableOption mkOption mkMerge mkIf;
-in {
+in
+{
   options = {
     deliveryhero = {
       kubernetes = {
@@ -26,16 +27,18 @@ in {
   };
 
   config = mkMerge [
-    (mkIf (kubeConsolidated.enable) {
-      home.file.".kube/config".text = let
-        repo = builtins.fetchGit {
-          url = "git@github.com:deliveryhero/logistics-kubernetes.git";
-          ref = kubeConsolidated.logisticsKubernetesRef;
-          rev = kubeConsolidated.logisticsKubernetesRev;
-        };
-      in builtins.readFile "${repo}/kubeconfig/consolidated";
+    (mkIf kubeConsolidated.enable {
+      home.file.".kube/config".text =
+        let
+          repo = builtins.fetchGit {
+            url = "git@github.com:deliveryhero/logistics-kubernetes.git";
+            ref = kubeConsolidated.logisticsKubernetesRef;
+            rev = kubeConsolidated.logisticsKubernetesRev;
+          };
+        in
+        builtins.readFile "${repo}/kubeconfig/consolidated";
     })
-    (mkIf (kubeConf.disableKubeConfigEnv) {
+    (mkIf kubeConf.disableKubeConfigEnv {
       home.sessionVariables."KUBECONFIG" = "/dev/null";
     })
   ];

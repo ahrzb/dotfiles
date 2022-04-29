@@ -7,16 +7,11 @@ let
   shadowsocks_config = pkgs.writeTextFile {
     name = "shadowsocks.json";
     text = builtins.toJSON {
-      server = cfg.server;
-      server_port = cfg.server_port;
-      local_address = cfg.local_address;
-      local_port = cfg.local_port;
-      password = cfg.password;
-      method = cfg.method;
-      plugin = cfg.plugin;
+      inherit (cfg) server server_port local_address local_port password method plugin;
     };
   };
-in {
+in
+{
   options = {
     services.shadowsocks-client = {
       enable = mkEnableOption "shadowsocks-client";
