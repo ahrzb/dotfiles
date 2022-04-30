@@ -1,9 +1,19 @@
-{ config, pkgs, lib, ... }: {
+{
   home.stateVersion = "22.05";
 
   home.sessionVariables = { EDITOR = "vim"; };
 
   programs = {
+    git = {
+      enable = true;
+      userEmail = "ahrzb5@gmail.com";
+      userName = "AmirHossein Roozbahani";
+      aliases = {
+        co = "checkout";
+        lg = "log --oneline --decorate --graph";
+      };
+    };
+
     direnv = {
       enable = true;
       nix-direnv = { enable = true; };

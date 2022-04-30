@@ -10,7 +10,6 @@
     fzf # A command-line fuzzy finder written in Go
     mosh # Mobile shell (ssh replacement)
 
-    git # Distributed version control system
     tig # Text-mode interface for git
     httpie # A command line HTTP client whose goal is to make CLI human-friendly
     jq # jq for binary formats
