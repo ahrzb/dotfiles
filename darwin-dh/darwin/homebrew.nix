@@ -31,6 +31,7 @@
     ];
     masApps = {
       "Xcode" = 497799835;
+      "1Password for Safari" = 1569813296;
     };
   };
 }
