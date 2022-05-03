@@ -30,7 +30,7 @@
   };
 
   environment = {
-    systemPackages = with pkgs; [ ];
+    systemPackages = with pkgs; [ kitty ];
     variables = { };
   };
 
