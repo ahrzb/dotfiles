@@ -32,6 +32,18 @@
       ];
     };
 
+    neovim = {
+      vimAlias = true;
+    };
+
+    nixvim = {
+      enable = true;
+      plugins.lightline.enable = true;
+      colorschemes.gruvbox.enable = true;
+      extraPlugins = with pkgs.vimPlugins; [
+      ];
+    };
+
     direnv = {
       enable = true;
       nix-direnv = { enable = true; };

@@ -10,6 +10,9 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
+    nixvim.url = github:pta2002/nixvim;
+    nixvim.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
@@ -32,13 +35,17 @@
           system = "x86_64-darwin";
           modules = [
             ./darwin
-
             home-manager.darwinModules.home-manager
             {
               nixpkgs = nixpkgsConfig;
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.temporaryadmin = import ./home;
+              home-manager.users.temporaryadmin = {
+                imports = [
+                  ./home
+                  inputs.nixvim.homeManagerModules.nixvim
+                ];
+              };
             }
           ];
         };
