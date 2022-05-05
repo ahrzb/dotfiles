@@ -35,7 +35,9 @@
   };
 
   fonts = {
-    enableFontDir = true;
+    fontDir = {
+      enable = true;
+    };
     fonts = with pkgs; [
       recursive
       iosevka-bin

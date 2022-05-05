@@ -16,8 +16,10 @@
     git # Distributed version control system
     tig # Text-mode interface for git
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
-    vagrant # A tool for building complete development environments
     poetry # Python dependency management and packaging made easy
+
+    # It's causing problems, commented out for now
+    # vagrant # A tool for building complete development environments
 
     # Classics
     coreutils # The basic file, shell and text manipulation utilities of the GNU operating system
