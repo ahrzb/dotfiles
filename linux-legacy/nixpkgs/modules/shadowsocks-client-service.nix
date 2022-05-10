@@ -7,7 +7,8 @@ let
   shadowsocks_config = pkgs.writeTextFile {
     name = "shadowsocks.json";
     text = builtins.toJSON {
-      inherit (cfg) server server_port local_address local_port password method plugin;
+      inherit (cfg)
+        server server_port local_address local_port password method plugin;
     };
   };
 in
