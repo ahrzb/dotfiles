@@ -14,6 +14,16 @@
       };
     };
 
+    kitty = {
+      enable = true;
+      theme = "Dracula";
+      darwinLaunchOptions = [ "--start-as=fullscreen" ];
+      font = {
+        name = "MesloLGS Nerd Font Mono";
+        size = 14;
+      };
+    };
+
     direnv = {
       enable = true;
       nix-direnv = { enable = true; };

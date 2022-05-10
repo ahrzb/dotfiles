@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ pkgs, ... }: {
   users.nix.configureBuildUsers = true;
 
   nix = {
@@ -30,7 +30,7 @@
   };
 
   environment = {
-    systemPackages = with pkgs; [ ];
+    systemPackages = with pkgs; [ kitty ];
     variables = { };
   };
 
