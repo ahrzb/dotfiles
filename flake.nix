@@ -7,8 +7,7 @@
   };
   outputs = { self, nixpkgs-unstable, pre-commit-hooks, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = nixpkgs-unstable.legacyPackages.${system};
+      let pkgs = nixpkgs-unstable.legacyPackages.${system};
       in
       {
         checks = {
@@ -24,11 +23,7 @@
         };
         devShell = pkgs.mkShell {
           inherit (self.checks.${system}.pre-commit-check) shellHook;
-          buildInputs = with pkgs; [
-            nixfmt
-            fd
-          ];
+          buildInputs = with pkgs; [ nixfmt fd ];
         };
-      }
-    );
+      });
 }
