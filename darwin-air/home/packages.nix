@@ -17,6 +17,9 @@
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
     go_1_18 # The Go Programming language
     rustup # The Rust toolchain installer
+    yarn # Fast, reliable, and secure dependency management for javascript
+    clojure # A Lisp dialect for the JVM
+    leiningen # Project automation for Clojure
     ocaml # OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles
     ocamlPackages.base # Full standard library replacement for OCaml
     ocamlPackages.utop # Universal toplevel for OCaml
