@@ -18,7 +18,10 @@
     go_1_18 # The Go Programming language
     rustup # The Rust toolchain installer
     ocaml # OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles
-    dune_3 # A composable build system
+    ocamlPackages.base # Full standard library replacement for OCaml
+    ocamlPackages.utop # Universal toplevel for OCaml
+    ocamlPackages.dune_3 # A composable build system
+    ocamlPackages.ocaml-lsp # OCaml Language Server Protocol implementation
 
     statix # Lints and suggestions for the nix programming language
     nixfmt # An opinionated formatter for Nix
