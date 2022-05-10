@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ pkgs, ... }: {
   users.nix.configureBuildUsers = true;
 
   # TODO: Configure binary cache public key
@@ -35,9 +35,7 @@
   };
 
   fonts = {
-    fontDir = {
-      enable = true;
-    };
+    fontDir = { enable = true; };
     fonts = with pkgs; [
       recursive
       iosevka-bin

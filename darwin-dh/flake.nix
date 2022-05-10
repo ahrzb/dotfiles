@@ -42,10 +42,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.temporaryadmin = {
-                imports = [
-                  ./home
-                  inputs.nixvim.homeManagerModules.nixvim
-                ];
+                imports = [ ./home inputs.nixvim.homeManagerModules.nixvim ];
               };
             }
           ];

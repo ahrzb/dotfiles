@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   home.stateVersion = "22.05";
 
   home.sessionVariables = {
@@ -32,9 +32,7 @@
       ];
     };
 
-    neovim = {
-      vimAlias = true;
-    };
+    neovim = { vimAlias = true; };
 
     nixvim = {
       enable = true;
@@ -43,8 +41,7 @@
         colorscheme = "dracula";
         enable = true;
       };
-      extraPlugins = with pkgs.vimPlugins; [
-      ];
+      extraPlugins = with pkgs.vimPlugins; [ ];
     };
 
     direnv = {
