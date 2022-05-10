@@ -39,7 +39,10 @@
     nixvim = {
       enable = true;
       plugins.lightline.enable = true;
-      colorschemes.gruvbox.enable = true;
+      colorschemes.base16 = {
+        colorscheme = "dracula";
+        enable = true;
+      };
       extraPlugins = with pkgs.vimPlugins; [
       ];
     };
