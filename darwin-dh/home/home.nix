@@ -61,12 +61,14 @@
   };
 
   deliveryhero = {
-    kubernetes = {
-      logisticsConsolidatedConfig = {
-        enable = true;
-        logisticsKubernetesRev = "17f024403b8776f71902d3dc1a0da6ae40d04958";
-      };
-      disableKubeConfigEnv = true;
+    disableKubeConfigEnv = true;
+    logisticsConsolidatedConfig = {
+      enable = true;
+      logisticsKubernetesRev = "17f024403b8776f71902d3dc1a0da6ae40d04958";
+    };
+    logisticsSaml2awsConfig = {
+      enable = true;
+      logisticsTerraformRev = "dc97df219b30d61ee9c667adc5c437d548def4c7";
     };
   };
 }
