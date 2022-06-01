@@ -41,7 +41,13 @@
         colorscheme = "dracula";
         enable = true;
       };
-      extraPlugins = with pkgs.vimPlugins; [ ];
+      extraPlugins = with pkgs.vimPlugins; [
+        nvim-treesitter
+        nvim-treesitter-context
+        nvim-treesitter-pyfold
+        nvim-treesitter-refactor
+        nvim-treesitter-textobjects
+      ];
     };
 
     direnv = {

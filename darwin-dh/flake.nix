@@ -29,8 +29,7 @@
             import inputs.nixpkgs { inherit (nixpkgsConfig) config; };
         };
       };
-    in
-    {
+    in {
       darwinConfigurations = {
         "C02G108AML86" = darwinSystem {
           system = "x86_64-darwin";
