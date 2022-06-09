@@ -41,7 +41,7 @@
               nixpkgs = nixpkgsConfig;
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.temporaryadmin = {
+              home-manager.users."a.roozbahani" = {
                 imports = [ ./home inputs.nixvim.homeManagerModules.nixvim ];
               };
             }
