@@ -12,17 +12,17 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
+  outputs = { darwin, home-manager, ... }@inputs:
     let
       inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
       nixpkgsConfig = {
         config = { allowUnfree = true; };
         overlays = attrValues overlays
-          ++ singleton (final: prev: { inherit (final.pkgs-x86) nix-index; });
+          ++ singleton (_final: _prev: { inherit (final.pkgs-x86) nix-index; });
       };
       overlays = {
-        extra-pkgs = final: prev: {
+        extra-pkgs = _final: _prev: {
           pkgs-x86 = import inputs.nixpkgs-unstable {
             system = "x86_64-darwin";
             config = nixpkgsConfig.config // { allowUnsupportedSystem = true; };
@@ -35,9 +35,10 @@
           };
         };
       };
-    in {
+    in
+    {
       darwinConfigurations = {
-        "AmirHosseins-MacBook-Air" = darwinSystem {
+        "AmirHosseinsAir" = darwinSystem {
           system = "aarch64-darwin";
           modules = [
             ./darwin
