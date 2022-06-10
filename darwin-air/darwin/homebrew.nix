@@ -1,11 +1,12 @@
-{ pkgs, lib, ... }: {
+{
   homebrew = {
     enable = true;
     cleanup = "zap";
     global.brewfile = true;
     global.noLock = true;
     taps =
-      [ "homebrew/bundle" "homebrew/cask" "homebrew/core" "homebrew/services" ];
+      [ "homebrew/bundle" "homebrew/cask" "homebrew/core" "homebrew/services" "gromgit/homebrew-fuse" ];
+    brews = [ "gromgit/fuse/ntfs-3g-mac" ];
     casks = [
       "1password"
       "alfred"
