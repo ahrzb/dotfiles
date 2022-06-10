@@ -10,6 +10,7 @@
     casks = [
       "1password"
       "alfred"
+      "raycast"
       "calibre"
       "discord"
       "docker"
