@@ -19,7 +19,7 @@
       nixpkgsConfig = {
         config = { allowUnfree = true; };
         overlays = attrValues overlays
-          ++ singleton (_final: _prev: { inherit (final.pkgs-x86) nix-index; });
+          ++ singleton (final: _prev: { inherit (final.pkgs-x86) nix-index; });
       };
       overlays = {
         extra-pkgs = _final: _prev: {
