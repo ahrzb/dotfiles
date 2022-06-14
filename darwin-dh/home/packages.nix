@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     argo # Container native workflow engine for Kubernetes
     aws-iam-authenticator # AWS IAM credentials for Kubernetes authentication
@@ -18,8 +18,7 @@
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
     poetry # Python dependency management and packaging made easy
 
-    # It's causing problems, commented out for now
-    # vagrant # A tool for building complete development environments
+    vagrant # A tool for building complete development environments
 
     # Classics
     coreutils # The basic file, shell and text manipulation utilities of the GNU operating system
