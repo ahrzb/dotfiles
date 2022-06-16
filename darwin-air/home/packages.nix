@@ -12,6 +12,8 @@
 
     docker-compose
 
+    beancount
+
     tig # Text-mode interface for git
     httpie # A command line HTTP client whose goal is to make CLI human-friendly
     jq # jq for binary formats
