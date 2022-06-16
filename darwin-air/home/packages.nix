@@ -15,7 +15,7 @@
     beancount
 
     tig # Text-mode interface for git
-    httpie # A command line HTTP client whose goal is to make CLI human-friendly
+    # httpie # A command line HTTP client whose goal is to make CLI human-friendly
     jq # jq for binary formats
     comby # Tool for searching and changing code structure
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
