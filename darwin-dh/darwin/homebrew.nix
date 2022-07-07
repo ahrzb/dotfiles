@@ -24,7 +24,6 @@
       "skype"
       "slack"
       "spotify"
-      "teamviewer"
       "ticktick"
       "tiles"
       "virtualbox"
