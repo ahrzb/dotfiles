@@ -20,3 +20,9 @@ export SAML2AWS_PASSWORD='<your Keycloak password (not the Okta one)>'
 export CLOUDFLARE_EMAIL='<firstname>.<lastname>@deliveryhero.com'
 export CLOUDFLARE_API_KEY='<cludflare-global-api-key>'
 ```
+
+### Other useful setup work
+
+```bash
+helm repo add deliveryhero https://charts.deliveryhero.io/
+```
