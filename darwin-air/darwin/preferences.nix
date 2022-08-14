@@ -6,13 +6,12 @@
     binaryCachePublicKeys =
       [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
     trustedUsers = [ "@admin" ];
+    extraOptions = ''
+      auto-optimise-store = true
+      experimental-features = nix-command flakes
+      extra-platforms = x86_64-darwin aarch64-darwin
+    '';
   };
-
-  nix.extraOptions = ''
-    auto-optimise-store = true
-    experimental-features = nix-command flakes
-    extra-platforms = x86_64-darwin aarch64-darwin
-  '';
 
   services.nix-daemon.enable = true;
   system.keyboard.enableKeyMapping = true;
@@ -35,7 +34,7 @@
   };
 
   fonts = {
-    enableFontDir = true;
+    fontDir.enable = true;
     fonts = with pkgs; [
       samim-fonts
       vazir-fonts
