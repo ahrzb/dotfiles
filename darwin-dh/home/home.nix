@@ -45,7 +45,7 @@
         colorscheme = "dracula";
         enable = true;
       };
-      extraPlugins = with pkgs.vimPlugins; [ SpaceVim ];
+      extraPlugins = with pkgs.vimPlugins; [ ];
     };
 
     direnv = {

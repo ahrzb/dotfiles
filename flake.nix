@@ -4,6 +4,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+    pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
   outputs = { self, nixpkgs-unstable, pre-commit-hooks, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
