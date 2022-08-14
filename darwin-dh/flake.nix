@@ -45,6 +45,20 @@
                 imports = [ ./home inputs.nixvim.homeManagerModules.nixvim ];
               };
             }
+            {
+              nix.registry = {
+                pkgs = {
+                  from = {
+                    id = "pkgs";
+                    type = "indirect";
+                  };
+                  to = {
+                    path = inputs.nixpkgs-unstable;
+                    type = "path";
+                  };
+                };
+              };
+            }
           ];
         };
       };
