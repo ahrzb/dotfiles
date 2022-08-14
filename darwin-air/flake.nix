@@ -50,6 +50,21 @@
               home-manager.useUserPackages = true;
               home-manager.users.ahrzb = import ./home;
             }
+
+            {
+              nix.registry = {
+                pkgs = {
+                  from = {
+                    id = "pkgs";
+                    type = "indirect";
+                  };
+                  to = {
+                    path = inputs.nixpkgs-unstable;
+                    type = "path";
+                  };
+                };
+              };
+            }
           ];
         };
       };
