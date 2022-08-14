@@ -12,10 +12,10 @@
 
     docker-compose
 
-    beancount
+    # beancount # Double-entry bookkeeping computer language (py310-openssl broken)
 
     tig # Text-mode interface for git
-    # httpie # A command line HTTP client whose goal is to make CLI human-friendly
+    # httpie # A command line HTTP client whose goal is to make CLI human-friendly (py310-openssl broken)
     jq # jq for binary formats
     comby # Tool for searching and changing code structure
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
