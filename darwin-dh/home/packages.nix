@@ -47,7 +47,6 @@
     asdf-vm # Manage multiple runtime versions with a single CLI tool
     go_1_17 # The Go Programming language
     rustup # The Rust toolchain installer
-    love_11 # A Lua-based 2D game engine/scripting language
 
     # Nix utilities
     cachix # Command line client for Nix binary cache hosting https://cachix.org
