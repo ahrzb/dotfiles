@@ -5,7 +5,7 @@
 curl -L https://nixos.org/nix/install | sh
 
 # Build and boostrap
-nix build .#darwin-dh#darwinConfigurations."a.roozbahani".system
+nix build ./darwin-dh#darwinConfigurations."a.roozbahani".system
 ./result/sw/bin/darwin-rebuild switch --flake .
 ```
 
