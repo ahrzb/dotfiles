@@ -27,6 +27,10 @@
         }
         {
           path = ./dotfiles/git/personal.gitconfig;
+          condition = "gitdir:~/repos/gitlab.com/ahrzb/**";
+        }
+        {
+          path = ./dotfiles/git/personal.gitconfig;
           condition = "gitdir:~/repos/codeberg.org/ahrzb/**";
         }
       ];
