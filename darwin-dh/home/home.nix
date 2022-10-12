@@ -15,6 +15,7 @@
       };
       extraConfig = {
         core.excludesfile = "${./dotfiles/git/global.gitignore}";
+        push.autoSetupRemote = true;
       };
       includes = [
         {
