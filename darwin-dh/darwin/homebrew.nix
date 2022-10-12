@@ -19,6 +19,7 @@
       "google-drive"
       "intellij-idea-ce"
       "iterm2"
+      "jetbrains-toolbox"
       "mendeley"
       "notion"
       "pycharm-ce"
@@ -35,6 +36,7 @@
     masApps = {
       "Xcode" = 497799835;
       "1Password for Safari" = 1569813296;
+      "Kindle" = 405399194;
     };
   };
 }
