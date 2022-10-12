@@ -1,9 +1,11 @@
 {
   homebrew = {
     enable = true;
-    cleanup = "zap";
     global.brewfile = true;
-    global.noLock = true;
+    onActivation = {
+      cleanup = "zap";
+      upgrade = true;
+    };
     taps =
       [ "homebrew/bundle" "homebrew/cask" "homebrew/core" "homebrew/services" ];
     brews = [ "gnu-getopt" "julia" "structurizr-cli" ];

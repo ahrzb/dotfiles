@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  users.nix.configureBuildUsers = true;
+  nix.configureBuildUsers = true;
 
   # TODO: Configure binary cache public key
   # nix = {
