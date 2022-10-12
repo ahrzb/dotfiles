@@ -10,9 +10,6 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-
-    nixvim.url = "github:pta2002/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs = { darwin, home-manager, ... }@inputs:
@@ -42,7 +39,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."a.roozbahani" = {
-                imports = [ ./home inputs.nixvim.homeManagerModules.nixvim ];
+                imports = [ ./home ];
               };
             }
             {

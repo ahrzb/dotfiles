@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   home.stateVersion = "22.05";
 
   home.sessionVariables = {
@@ -34,18 +34,6 @@
           condition = "gitdir:~/repos/codeberg.org/ahrzb/**";
         }
       ];
-    };
-
-    neovim = { vimAlias = true; };
-
-    nixvim = {
-      enable = true;
-      plugins.lightline.enable = true;
-      colorschemes.base16 = {
-        colorscheme = "dracula";
-        enable = true;
-      };
-      extraPlugins = with pkgs.vimPlugins; [ ];
     };
 
     direnv = {
