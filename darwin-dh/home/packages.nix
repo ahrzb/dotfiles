@@ -48,6 +48,8 @@
     go_1_17 # The Go Programming language
     rustup # The Rust toolchain installer
 
+    neovim # Vim text editor fork focused on extensibility and agility
+
     # Nix utilities
     cachix # Command line client for Nix binary cache hosting https://cachix.org
     nix-diff # Explain why two Nix derivations differ
