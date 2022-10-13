@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   home.stateVersion = "22.05";
 
   home.sessionVariables = {
@@ -64,6 +64,11 @@
           UseKeychain yes
           AddKeysToAgent yes
       '';
+    };
+
+    java = {
+      enable = true;
+      package = pkgs.openjdk11;
     };
   };
 
