@@ -12,26 +12,21 @@
 
     docker-compose
 
-    # beancount # Double-entry bookkeeping computer language (py310-openssl broken)
+    beancount # Double-entry bookkeeping computer language (py310-openssl broken)
 
-    tig # Text-mode interface for git
-    # httpie # A command line HTTP client whose goal is to make CLI human-friendly (py310-openssl broken)
+    httpie # A command line HTTP client whose goal is to make CLI human-friendly (py310-openssl broken)
     jq # jq for binary formats
     comby # Tool for searching and changing code structure
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
     go_1_18 # The Go Programming language
     rustup # The Rust toolchain installer
     yarn # Fast, reliable, and secure dependency management for javascript
-    clojure # A Lisp dialect for the JVM
-    leiningen # Project automation for Clojure
-    ocaml # OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles
-    ocamlPackages.base # Full standard library replacement for OCaml
-    ocamlPackages.utop # Universal toplevel for OCaml
-    ocamlPackages.dune_3 # A composable build system
-    ocamlPackages.ocaml-lsp # OCaml Language Server Protocol implementation
+    nodejs-18_x # Event-driven I/O framework for the V8 JavaScript engine
+    nodePackages.pnpm # Fast, disk space efficient package manager for node
+
+    neovim # Vim text editor fork focused on extensibility and agility
 
     statix # Lints and suggestions for the nix programming language
-    nixfmt # An opinionated formatter for Nix
     nix-diff # Explain why two Nix derivations differ
 
     m-cli # Swiss Army Knife for macOS

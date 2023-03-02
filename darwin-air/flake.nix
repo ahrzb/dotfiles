@@ -35,38 +35,46 @@
           };
         };
       };
+      system = darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          ./darwin
+
+          home-manager.darwinModules.home-manager
+          {
+            nixpkgs = nixpkgsConfig;
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.ahrzb = import ./home;
+          }
+
+          {
+            nix.registry = {
+              pkgs = {
+                from = {
+                  id = "pkgs";
+                  type = "indirect";
+                };
+                to = {
+                  path = inputs.nixpkgs-unstable;
+                  type = "path";
+                };
+              };
+            };
+          }
+        ];
+      };
     in
     {
       darwinConfigurations = {
-        "AmirHosseinsAir" = darwinSystem {
-          system = "aarch64-darwin";
-          modules = [
-            ./darwin
+        "AmirHosseinsAir" = system;
+      };
 
-            home-manager.darwinModules.home-manager
-            {
-              nixpkgs = nixpkgsConfig;
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.ahrzb = import ./home;
-            }
+      formatter.aarch64-darwin = inputs.nixpkgs.legacyPackages.aarch64-darwin.nixfmt;
 
-            {
-              nix.registry = {
-                pkgs = {
-                  from = {
-                    id = "pkgs";
-                    type = "indirect";
-                  };
-                  to = {
-                    path = inputs.nixpkgs-unstable;
-                    type = "path";
-                  };
-                };
-              };
-            }
-          ];
-        };
+      apps.aarch64-darwin.default = {
+        type = "app";
+        program = "${system}/sw/bin/darwin-rebuild";
       };
     };
 }

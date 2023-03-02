@@ -1,1 +1,1 @@
-{ imports = [ ./security-pam.nix ]; }
+{ imports = [ ]; }

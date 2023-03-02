@@ -1,11 +1,12 @@
 { pkgs, ... }: {
-  users.nix.configureBuildUsers = true;
 
   nix = {
-    binaryCaches = [ "https://cache.nixos.org/" ];
-    binaryCachePublicKeys =
-      [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
-    trustedUsers = [ "@admin" ];
+    settings = {
+      trusted-users = [ "@admin" ];
+      substituters = [ "https://cache.nixos.org/" ];
+      trusted-public-keys = [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
+    };
+    configureBuildUsers = true;
     extraOptions = ''
       auto-optimise-store = true
       experimental-features = nix-command flakes

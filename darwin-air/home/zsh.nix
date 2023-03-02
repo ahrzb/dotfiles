@@ -11,6 +11,8 @@ in
   programs.zsh = {
     enable = true;
     initExtraBeforeCompInit = ''
+      [[ -f $HOME/.secrets ]] && source $HOME/.secrets
+
       export ZINIT_HOME="${zinit_home}"
       source "${zinit_home}/zinit.zsh"
       zinit snippet OMZ::plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh

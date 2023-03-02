@@ -1,7 +1,12 @@
-{
+{ _ }: {
   home.stateVersion = "22.05";
 
   home.sessionVariables = { EDITOR = "vim"; };
+
+  home.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
 
   programs = {
     git = {
