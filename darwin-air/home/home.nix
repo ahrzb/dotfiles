@@ -1,4 +1,4 @@
-{ _ }: {
+{
   home.stateVersion = "22.05";
 
   home.sessionVariables = { EDITOR = "vim"; };
@@ -51,6 +51,11 @@
     zoxide = {
       enable = true;
       enableZshIntegration = true;
+    };
+
+    doom-emacs = {
+      enable = true;
+      doomPrivateDir = ./dotfiles/doom.d;
     };
   };
 }

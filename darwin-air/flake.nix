@@ -9,10 +9,11 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
-  outputs = { darwin, home-manager, ... }@inputs:
+  outputs = { darwin, home-manager, nix-doom-emacs, ... }@inputs:
     let
       inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
@@ -45,7 +46,9 @@
             nixpkgs = nixpkgsConfig;
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.ahrzb = import ./home;
+            home-manager.users.ahrzb = { ... }: {
+              imports = [ nix-doom-emacs.hmModule ./home ];
+            };
           }
 
           {
