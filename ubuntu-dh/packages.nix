@@ -45,8 +45,6 @@
     mosh # Secure ssh-agent forwarding for Mosh and SSH
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
     sd # Intuitive find & replace CLI (sed alternative)
-    zig # General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
-    zls # Zig LSP implementation + Zig Language Server
     poetry # Python dependency management and packaging made easy
     pdm # A modern Python package manager with PEP 582 support
     jsonnet # Purely-functional configuration language that helps you define JSON data
@@ -55,8 +53,12 @@
     # Devtools, other
     asdf-vm # Manage multiple runtime versions with a single CLI tool
     rustup # The Rust toolchain installer
-    rust-analyzer # A modular compiler frontend for the Rust language
+    # rust-analyzer # A modular compiler frontend for the Rust language
     evcxr # An evaluation context for Rust
+    zig # General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
+    zls # Zig LSP implementation + Zig Language Server
+    gopls # Official language server for the Go language
+    dart # Scalable programming language, with robust libraries and runtimes, for building web, server, and mobile apps
     ((emacsPackagesFor emacs).emacsWithPackages
       (epkgs: [ epkgs.vterm epkgs.pcre2el epkgs.lsp-pyright ]))
 
@@ -73,7 +75,7 @@
     gnumake
     docker-compose
 
-    nodejs-19_x
+    nodejs_20
     nodePackages.pnpm
 
     stdenv
