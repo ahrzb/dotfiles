@@ -90,9 +90,19 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
-      extraConfig = ''
+      extraLuaConfig = ''
+        vim.cmd [[colorscheme dracula]]
       '';
+
       coc.enable = true;
+      plugins = with pkgs.vimPlugins; [
+        dracula-nvim
+        which-key-nvim
+        nvim-fzf
+        vim-gitgutter
+        vim-fugitive
+        nvim-treesitter.withAllGrammars
+      ];
     };
 
     ssh = {
