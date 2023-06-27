@@ -137,7 +137,7 @@
   deliveryhero = {
     disableKubeConfigEnv = true;
     logisticsConsolidatedConfig = {
-      enable = true;
+      enable = false;
       logisticsKubernetesRev = "05145624401662c2a8de89b8fb11bbe8c64d7db6";
     };
     logisticsSaml2awsConfig = {
