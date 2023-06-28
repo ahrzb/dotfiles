@@ -84,27 +84,6 @@
       enableAliases = true;
     };
 
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-      extraLuaConfig = ''
-        vim.cmd [[colorscheme dracula]]
-      '';
-
-      coc.enable = true;
-      plugins = with pkgs.vimPlugins; [
-        dracula-nvim
-        which-key-nvim
-        nvim-fzf
-        vim-gitgutter
-        vim-fugitive
-        nvim-treesitter.withAllGrammars
-      ];
-    };
-
     ssh = {
       enable = true;
       extraConfig = ''

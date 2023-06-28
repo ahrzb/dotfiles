@@ -16,7 +16,7 @@
     home = inputs.home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [
-        ./home.nix ./packages.nix ./zsh.nix ./bash.nix ./python.nix ./modules
+        ./home.nix ./packages.nix ./zsh.nix ./bash.nix ./python.nix ./modules ./neovim.nix
         {
           nixpkgs.overlays = [
             (import inputs.emacs-overlay)

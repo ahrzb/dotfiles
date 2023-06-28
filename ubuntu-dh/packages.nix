@@ -59,7 +59,7 @@
     zls # Zig LSP implementation + Zig Language Server
     gopls # Official language server for the Go language
     dart # Scalable programming language, with robust libraries and runtimes, for building web, server, and mobile apps
-    ((emacsPackagesFor emacs).emacsWithPackages
+    ((emacsPackagesFor emacs-git).emacsWithPackages
       (epkgs: [ epkgs.vterm epkgs.pcre2el epkgs.lsp-pyright ]))
 
     # Nix utilities
