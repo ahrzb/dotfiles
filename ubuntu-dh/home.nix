@@ -79,17 +79,18 @@
     jq.enable = true;
     k9s.enable = true;
 
-    exa = {
+    eza = {
       enable = true;
       enableAliases = true;
     };
 
     ssh = {
       enable = true;
-      extraConfig = ''
-        Host *
-          AddKeysToAgent yes
-      '';
+      matchBlocks."*" = {
+        host = "*";
+        extraOptions.IdentityAgent = "~/.1password/agent.sock";
+        extraOptions.AddKeysToAgent = "true";
+      };
     };
 
     kitty = {
