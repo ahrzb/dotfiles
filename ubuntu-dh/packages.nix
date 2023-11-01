@@ -22,10 +22,7 @@
     k9s # Kubernetes CLI To Manage Your Clusters In Style
 
     git # Distributed version control system
-    tig # Text-mode interface for git
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks
-
-    vagrant # A tool for building complete development environments
 
     # Classics
     coreutils # The basic file, shell and text manipulation utilities of the GNU operating system
@@ -49,18 +46,19 @@
     pdm # A modern Python package manager with PEP 582 support
     jsonnet # Purely-functional configuration language that helps you define JSON data
     comby # Tool for searching and changing code structure
+    python3Packages.dunamai # Dynamic version generation
+    glow # Render markdown on the CLI, with pizzazz!
 
     # Devtools, other
     asdf-vm # Manage multiple runtime versions with a single CLI tool
     rustup # The Rust toolchain installer
-    # rust-analyzer # A modular compiler frontend for the Rust language
+    rust-analyzer # A modular compiler frontend for the Rust language
     evcxr # An evaluation context for Rust
     zig # General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
     zls # Zig LSP implementation + Zig Language Server
     gopls # Official language server for the Go language
     dart # Scalable programming language, with robust libraries and runtimes, for building web, server, and mobile apps
-    ((emacsPackagesFor emacs-git).emacsWithPackages
-      (epkgs: [ epkgs.vterm epkgs.pcre2el epkgs.lsp-pyright ]))
+    ((emacsPackagesFor emacs29).emacsWithPackages (epkgs: with epkgs; [ tree-sitter ])) # The extensible, customizable GNU text editor
 
     # Nix utilities
     cachix # Command line client for Nix binary cache hosting https://cachix.org
@@ -72,12 +70,12 @@
     gh # GitHub CLI tool
     wl-clipboard # Command-line copy/paste utilities for Wayland
 
-    gnumake
-    docker-compose
+    gnumake # A tool to control the generation of non-source files from sources
+    docker-compose # Multi-container orchestration for Docker
 
-    nodejs_20
-    nodePackages.pnpm
+    nodejs_latest # Event-driven I/O framework for the V8 JavaScript engine
+    nodePackages.pnpm # Fast, disk space efficient package manager
 
-    stdenv
+    stdenv # The default build environment for Unix packages in Nixpkgs
   ];
 }

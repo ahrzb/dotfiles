@@ -125,4 +125,10 @@
       logisticsTerraformRev = "b308d8b426ff864c3c9da9562e9c94b750ff663a";
     };
   };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
 }
