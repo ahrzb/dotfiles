@@ -1,14 +1,13 @@
+{ pkgs, ... }:
+
 {
-  home.stateVersion = "22.05";
-
-  home.username = "ahrzb";
-  home.homeDirectory = "/home/ahrzb";
-
-  home.sessionVariables = { };
-  home.file = { };
-  home.shellAliases = {
-    vi = "nvim";
-    vim = "nvim";
+  home = {
+    stateVersion = "22.05";
+    username = "ahrzb";
+    homeDirectory = "/home/ahrzb";
+    sessionVariables = { };
+    file = { };
+    shellAliases = { };
   };
 
   programs = {
@@ -33,7 +32,7 @@
         "alt+right" = "send_text all \\x1b\\x66";
       };
       font = {
-        name = "MesloLGS Nerd Font Mono";
+        name = "Iosevka Nerd Font Mono";
         size = 14;
       };
     };
