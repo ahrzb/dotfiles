@@ -9,22 +9,32 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      registry = { pkgs = nixpkgs; };
     in
     {
       homeConfigurations."ahrzb" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home ];
+        modules = [
+          ./home
+          {
+            nix.registry = nixpkgs.lib.mapAttrs
+              (name: flake: {
+                from.id = name;
+                from.type = "indirect";
+                to.path = flake;
+                to.type = "path";
+              })
+              registry;
+          }
+        ];
       };
       nixosConfigurations."rapture" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./nixos/configuration.nix
-        ];
-        specialArgs = inputs;
+        inherit system;
+        modules = [ ./nixos ];
       };
     };
 }
