@@ -14,9 +14,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       registry = { pkgs = nixpkgs; };
-    in
-    {
-      homeConfigurations."ahrzb" = home-manager.lib.homeManagerConfiguration {
+      home = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home
@@ -32,9 +30,16 @@
           }
         ];
       };
+    in
+    {
+      homeConfigurations."ahrzb" = home;
       nixosConfigurations."rapture" = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./nixos ];
+      };
+      apps."${system}".sync = {
+        type = "app";
+        program = "${home.activationPackage}/activate";
       };
     };
 }
