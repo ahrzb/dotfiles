@@ -1,12 +1,11 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    discord
-    telegram-desktop
-    chromium
-    nvtop
-    spotify
-    obsidian
-    sddm-kcm
+    discord # All-in-one cross-platform voice and text chat for gamers
+    telegram-desktop # Telegram Desktop messaging app
+    chromium # An open source web browser from Google
+    nvtop # A (h)top like task monitor for AMD, Adreno, Intel and NVIDIA GPUs
+    spotify # Play music from the Spotify music service
+    obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 
     coreutils # The basic file, shell and text manipulation utilities of the GNU operating system
     curl # A command line tool for transferring files with URL syntax
