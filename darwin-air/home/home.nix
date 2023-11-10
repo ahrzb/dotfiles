@@ -1,11 +1,14 @@
 {
-  home.stateVersion = "22.05";
-
-  home.sessionVariables = { EDITOR = "vim"; };
-
-  home.shellAliases = {
-    vi = "nvim";
-    vim = "nvim";
+  home = {
+    stateVersion = "22.05";
+    username = "ahrzb";
+    sessionVariables = { EDITOR = "vim"; };
+    shellAliases = {
+      vi = "nvim";
+      vim = "nvim";
+    };
+    file = { };
+    shellAliases = { };
   };
 
   programs = {
@@ -28,7 +31,7 @@
         "alt+right" = "send_text all \\x1b\\x66";
       };
       font = {
-        name = "MesloLGS Nerd Font Mono";
+        name = "Iosevka Nerd Font Mono";
         size = 14;
       };
     };
@@ -53,9 +56,9 @@
       enableZshIntegration = true;
     };
 
-    doom-emacs = {
-      enable = true;
-      doomPrivateDir = ./dotfiles/doom.d;
-    };
+    # doom-emacs = {
+    #   enable = true;
+    #   doomPrivateDir = ./dotfiles/doom.d;
+    # };
   };
 }

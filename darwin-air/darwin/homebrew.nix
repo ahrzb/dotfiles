@@ -11,15 +11,19 @@
       "homebrew/cask"
       "homebrew/core"
       "homebrew/services"
+      {
+        name = "lencx/chatgpt";
+        clone_target = "https://github.com/lencx/chatgpt.git";
+      }
     ];
     brews = [ ];
     casks = [
       "1password"
       "alfred"
+      "anki"
       "calibre"
       "discord"
       "docker"
-      "emacs"
       "figma"
       "firefox"
       "google-chrome"
@@ -30,12 +34,18 @@
       "skype"
       "spotify"
       "steam"
+      "syncthing"
+      "talon"
       "telegram"
       "ticktick"
       "tiles"
       "visual-studio-code"
       "vlc"
       "whatsapp"
+      {
+        name = "chatgpt";
+        args = { no_quarantine = true; };
+      }
     ];
   };
 }

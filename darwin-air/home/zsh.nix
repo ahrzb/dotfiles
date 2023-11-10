@@ -3,8 +3,8 @@ let
   zinit_home = pkgs.fetchFromGitHub {
     owner = "zdharma-continuum";
     repo = "zinit";
-    rev = "c703290fc22839bc799790798460bbe850ce9688";
-    sha256 = "sha256-QWo4WX3yBO3oOs9DkhYCUB8RjfqPFZwifw4VId1TXUQ=";
+    rev = "bcf70e8268dd09737d262919dcba0ff3301a705d";
+    sha256 = "sha256-WVolKlLL5FoD6sXBIbNOZtbbMdIcjbvzh5E2ad/74dI=";
   };
 in
 {
@@ -15,6 +15,10 @@ in
 
       export ZINIT_HOME="${zinit_home}"
       source "${zinit_home}/zinit.zsh"
+
+      zinit snippet OMZL::clipboard.zsh
+      zinit snippet OMZL::termsupport.zsh
+
       zinit snippet OMZ::plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
       zinit snippet OMZ::plugins/git/git.plugin.zsh
       zinit snippet OMZ::plugins/aws/aws.plugin.zsh
@@ -28,6 +32,8 @@ in
       zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
       zinit load "zsh-users/zsh-syntax-highlighting"
+
+      eval $(${pkgs.opam}/bin/opam env)
     '';
   };
 }
