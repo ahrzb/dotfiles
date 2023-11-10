@@ -12,7 +12,8 @@ let
     rev = cfg.logisticsConsolidatedConfig.logisticsKubernetesRev;
   };
   inherit (lib) types mkEnableOption mkOption mkMerge mkIf;
-in {
+in
+{
   options = {
     deliveryhero = mkOption {
       type = types.submodule {

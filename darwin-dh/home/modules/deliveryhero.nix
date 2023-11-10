@@ -12,7 +12,8 @@ let
     rev = cfg.logisticsConsolidatedConfig.logisticsKubernetesRev;
   };
   inherit (lib) types mkEnableOption mkOption mkMerge mkIf;
-in {
+in
+{
   options = {
     deliveryhero = {
       disableKubeConfigEnv = mkEnableOption "Set KUBECONFIG to /dev/null";

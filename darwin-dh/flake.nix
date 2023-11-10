@@ -36,10 +36,12 @@
             home-manager.darwinModules.home-manager
             {
               nixpkgs = nixpkgsConfig;
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users."a.roozbahani" = {
-                imports = [ ./home ];
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users."a.roozbahani" = {
+                  imports = [ ./home ];
+                };
               };
             }
             {

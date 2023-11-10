@@ -17,7 +17,6 @@
             hooks = {
               nixpkgs-fmt.enable = true;
               statix.enable = true;
-              nix-linter.enable = true;
               yamllint.enable = true;
             };
           };
@@ -26,5 +25,6 @@
           inherit (self.checks.${system}.pre-commit-check) shellHook;
           buildInputs = with pkgs; [ nixfmt fd ];
         };
+        formatter = pkgs.nixpkgs-fmt;
       });
 }

@@ -3,7 +3,8 @@
 let
   secrets = builtins.fromTOML (builtins.readFile ./conf/secrets.toml);
   sshHosts = builtins.fromTOML (builtins.readFile ./conf/ssh-hosts.toml);
-in {
+in
+{
   imports = [ ./modules/shadowsocks-client-service.nix ];
 
   programs.home-manager.enable = true;

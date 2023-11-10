@@ -6,7 +6,8 @@ let
     rev = "c703290fc22839bc799790798460bbe850ce9688";
     sha256 = "sha256-QWo4WX3yBO3oOs9DkhYCUB8RjfqPFZwifw4VId1TXUQ=";
   };
-in {
+in
+{
   programs.zsh = {
     enable = true;
     initExtraFirst = ''

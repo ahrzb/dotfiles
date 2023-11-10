@@ -1,11 +1,12 @@
 { pkgs, ... }: {
-  home.stateVersion = "22.05";
-  home.username = "a.roozbahani";
-  home.homeDirectory = "/home/a.roozbahani";
-
-  home.sessionVariables = {
-    LANG = "en_US.UTF-8";
-    LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
+  home = {
+    stateVersion = "22.05";
+    username = "a.roozbahani";
+    homeDirectory = "/home/a.roozbahani";
+    sessionVariables = {
+      LANG = "en_US.UTF-8";
+      LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
+    };
   };
 
   programs = {

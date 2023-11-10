@@ -16,18 +16,18 @@
           languageserver = {
             nix = {
               command = "${pkgs.nil}/bin/nil";
-              filetypes = ["nix"];
-              rootPatterns = ["flake.nix"];
+              filetypes = [ "nix" ];
+              rootPatterns = [ "flake.nix" ];
             };
             terraform = {
               command = "${pkgs.terraform-ls}/bin/terraform-ls";
-              args = ["serve"];
+              args = [ "serve" ];
               filetypes = [
                 "terraform"
                 "tf"
               ];
-              initializationOptions = {};
-              settings = {};
+              initializationOptions = { };
+              settings = { };
             };
           };
           suggest = {
