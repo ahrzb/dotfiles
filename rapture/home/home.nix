@@ -19,32 +19,19 @@
       userName = "AmirHossein Roozbahani";
       aliases = {
         co = "checkout";
+        sw = "switch";
         lg = "log --oneline --decorate --graph";
-      };
-    };
-
-    kitty = {
-      enable = true;
-      theme = "Dracula";
-      darwinLaunchOptions = [ "--start-as=fullscreen" ];
-      keybindings = {
-        "alt+left" = "send_text all \\x1b\\x62";
-        "alt+right" = "send_text all \\x1b\\x66";
-      };
-      font = {
-        name = "Iosevka Nerd Font Mono";
-        size = 14;
       };
     };
 
     direnv = {
       enable = true;
-      nix-direnv = { enable = true; };
+      nix-direnv.enable = true;
     };
 
     htop = {
       enable = true;
-      settings = { show_program_path = true; };
+      settings.show_program_path = true;
     };
 
     starship = {
@@ -60,11 +47,6 @@
       enable = true;
       enableZshIntegration = true;
     };
-
-    # doom-emacs = {
-    # enable = true;
-    # doomPrivateDir = ./dotfiles/doom.d;
-    # };
 
     ssh = {
       enable = true;
