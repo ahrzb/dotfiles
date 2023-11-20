@@ -19,6 +19,7 @@
       entrypoints = [
         ./devshell.nix
         ./darwin-air
+        ./rapture
       ];
     in
     foldl (outputs: path: recursiveUpdate outputs (import path inputs)) { } entrypoints;
