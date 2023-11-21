@@ -14,7 +14,7 @@ in
             useGlobalPkgs = true;
             useUserPackages = true;
             users."ahrzb" = {
-              imports = [ ./home ];
+              imports = [ ./home ../common/home ];
             };
           };
         }

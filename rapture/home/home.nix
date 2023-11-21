@@ -13,16 +13,10 @@
   programs = {
     home-manager.enable = true;
 
-    git = {
-      enable = true;
-      userEmail = "ahrzb5@gmail.com";
-      userName = "AmirHossein Roozbahani";
-      aliases = {
-        co = "checkout";
-        sw = "switch";
-        lg = "log --oneline --decorate --graph";
-      };
-    };
+    neovim.enable = true; # Configured in common/home
+    git.enable = true; # Configured in common/home
+    kitty.enable = true; # Configured in common/home
+    zsh.enable = true; # Configured in common/home
 
     direnv = {
       enable = true;

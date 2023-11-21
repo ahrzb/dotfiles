@@ -1,7 +1,7 @@
 {
   programs.kitty = {
-    enable = true;
     theme = "Dracula";
+    darwinLaunchOptions = [ "--start-as=fullscreen" ];
     keybindings = {
       "alt+left" = "send_text all \\x1b\\x62";
       "alt+right" = "send_text all \\x1b\\x66";

@@ -12,10 +12,11 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = { self, nixpkgs, pre-commit-hooks, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
     let
-      inherit (nixpkgs.lib) foldl recursiveUpdate pipe;
+      inherit (nixpkgs.lib) foldl recursiveUpdate;
       entrypoints = [
         ./devshell.nix
         ./darwin-air

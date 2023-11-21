@@ -9,7 +9,6 @@ let
 in
 {
   programs.zsh = {
-    enable = true;
     initExtraBeforeCompInit = ''
       [[ -f $HOME/.secrets ]] && source $HOME/.secrets
 
