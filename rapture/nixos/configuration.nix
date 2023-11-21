@@ -49,16 +49,12 @@
       enable = true;
 
       # Enable the KDE Plasma Desktop Environment.
-      displayManager = {
-        displayManager.sddm.enable = true;
-        desktopManager.plasma5.enable = true;
-      };
+      displayManager.sddm.enable = true;
+      desktopManager.plasma5.enable = true;
 
       # Configure keymap in X11
-      services.xserver = {
-        layout = "us";
-        xkbVariant = "";
-      };
+      layout = "us";
+      xkbVariant = "";
     };
 
     # Enable CUPS to print documents.
