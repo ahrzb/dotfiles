@@ -10,36 +10,9 @@
   };
 
   programs = {
-    git = {
-      enable = true;
-      aliases = {
-        co = "checkout";
-        lg = "log --oneline --decorate --graph";
-      };
-      extraConfig = {
-        core.excludesfile = "${./dotfiles/git/global.gitignore}";
-        push.autoSetupRemote = true;
-        blame.ignoreRevsFile = ".git-blame-ignore-revs";
-      };
-      includes = [
-        {
-          path = ./dotfiles/git/deliveryhero.gitconfig;
-          condition = "gitdir:~/repos/github.com/deliveryhero/**";
-        }
-        {
-          path = ./dotfiles/git/personal.gitconfig;
-          condition = "gitdir:~/repos/github.com/ahrzb/**";
-        }
-        {
-          path = ./dotfiles/git/personal.gitconfig;
-          condition = "gitdir:~/repos/gitlab.com/ahrzb/**";
-        }
-        {
-          path = ./dotfiles/git/personal.gitconfig;
-          condition = "gitdir:~/repos/codeberg.org/ahrzb/**";
-        }
-      ];
-    };
+    home-manager.enable = true;
+    git.enable = true;
+    zsh.enable = true;
 
     direnv = {
       enable = true;
@@ -92,26 +65,6 @@
         extraOptions.IdentityAgent = "~/.1password/agent.sock";
         extraOptions.AddKeysToAgent = "true";
       };
-    };
-
-    kitty = {
-      enable = true;
-      font = {
-        package = pkgs.nerdfonts.override {
-          fonts = [ "FiraCode" ];
-        };
-        name = "Fira Code";
-      };
-      settings = {
-        font_size = 14;
-        enable_audio_bell = false;
-        background_opacity = "0.9";
-      };
-    };
-
-    java = {
-      enable = true;
-      package = pkgs.openjdk11;
     };
   };
 

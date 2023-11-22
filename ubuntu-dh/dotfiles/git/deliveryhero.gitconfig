@@ -1,9 +1,0 @@
-[user]
-    email = amirhossein.roozbahani@deliveryhero.com
-    name = AmirHossein Roozbahani
-
-[branch "main"]
-    pushRemote = "no_push"
-
-[branch "master"]
-    pushRemote = "no_push"

@@ -13,6 +13,9 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    emacs-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = { self, nixpkgs, ... }@inputs:
     let
@@ -21,6 +24,7 @@
         ./devshell.nix
         ./darwin-air
         ./rapture
+        ./ubuntu-dh
       ];
     in
     foldl (outputs: path: recursiveUpdate outputs (import path inputs)) { } entrypoints;

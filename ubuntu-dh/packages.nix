@@ -4,7 +4,6 @@
     aws-iam-authenticator # AWS IAM credentials for Kubernetes authentication
     saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
     google-cloud-sdk # Tools for the google cloud platform
-    awscli2
 
     terraform # Tool for building, changing, and versioning infrastructure
     kubectl # Kubernetes CLI
@@ -52,7 +51,6 @@
     # Devtools, other
     asdf-vm # Manage multiple runtime versions with a single CLI tool
     rustup # The Rust toolchain installer
-    rust-analyzer # A modular compiler frontend for the Rust language
     evcxr # An evaluation context for Rust
     zig # General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
     zls # Zig LSP implementation + Zig Language Server
