@@ -1,6 +1,6 @@
 ignore = [
   "rapture/nixos/hardware-configuration.nix",
-  "linux-legacy"
+  "linux-legacy",
   "darwin-dh"
 ]
 
