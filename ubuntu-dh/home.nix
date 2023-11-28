@@ -14,7 +14,6 @@
     git.enable = true;
     zsh.enable = true;
     neovim.enable = true;
-    awscli.enable = true;
     htop.enable = true;
     starship.enable = true;
     zoxide.enable = true;
