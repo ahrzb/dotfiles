@@ -4,6 +4,11 @@
     aws-iam-authenticator # AWS IAM credentials for Kubernetes authentication
     saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
     google-cloud-sdk # Tools for the google cloud platform
+
+    # The home-manager package overrides the credentials file and relies on credential_process feature
+    # to be used for fetching credentials which saml2aws does not support for the time being
+    # https://github.com/Versent/saml2aws/issues/120
+    # 1password setup also needs to compensate for that to allow easy TOTP login
     awscli2 # Unified tool to manage your AWS services
 
     terraform # Tool for building, changing, and versioning infrastructure
