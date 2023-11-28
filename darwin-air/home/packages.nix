@@ -23,9 +23,6 @@
     yarn # Fast, reliable, and secure dependency management for javascript
     nodejs-18_x # Event-driven I/O framework for the V8 JavaScript engine
     nodePackages.pnpm # Fast, disk space efficient package manager for node
-    opam
-
-    neovim # Vim text editor fork focused on extensibility and agility
 
     statix # Lints and suggestions for the nix programming language
     nix-diff # Explain why two Nix derivations differ

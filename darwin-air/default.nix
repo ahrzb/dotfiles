@@ -1,6 +1,6 @@
-{ nixpkgs, darwin, home-manager, ... }:
+{ nixpkgs, nix-darwin, home-manager, ... }:
 let
-  inherit (darwin.lib) darwinSystem;
+  inherit (nix-darwin.lib) darwinSystem;
   inherit (nixpkgs.lib) attrValues optionalAttrs singleton;
   nixpkgsConfig = {
     config = { allowUnfree = true; };
@@ -20,7 +20,7 @@ let
     home-manager = {
       useGlobalPkgs = true;
       useUserPackages = true;
-      users.ahrzb = { ... }: { imports = [ ./home ]; };
+      users.ahrzb = { ... }: { imports = [ ./home ../common/home ]; };
     };
   };
   registry = {

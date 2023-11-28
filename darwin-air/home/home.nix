@@ -2,44 +2,18 @@
   home = {
     stateVersion = "22.05";
     username = "ahrzb";
-    sessionVariables = { EDITOR = "vim"; };
-    shellAliases = {
-      vi = "nvim";
-      vim = "nvim";
-    };
+    sessionVariables = { };
+    shellAliases = { };
     file = { };
     shellAliases = { };
   };
 
   programs = {
-    git = {
-      enable = true;
-      userEmail = "ahrzb5@gmail.com";
-      userName = "AmirHossein Roozbahani";
-      aliases = {
-        co = "checkout";
-        lg = "log --oneline --decorate --graph";
-      };
-    };
-
-    kitty = {
-      enable = true;
-      theme = "Dracula";
-      darwinLaunchOptions = [ "--start-as=fullscreen" ];
-      keybindings = {
-        "alt+left" = "send_text all \\x1b\\x62";
-        "alt+right" = "send_text all \\x1b\\x66";
-      };
-      font = {
-        name = "Iosevka Nerd Font Mono";
-        size = 14;
-      };
-    };
-
-    direnv = {
-      enable = true;
-      nix-direnv = { enable = true; };
-    };
+    git.enable = true;
+    kitty.enable = true;
+    direnv.enable = true;
+    neovim.enable = true;
+    zsh.enable = true;
 
     htop = {
       enable = true;
@@ -55,10 +29,5 @@
       enable = true;
       enableZshIntegration = true;
     };
-
-    # doom-emacs = {
-    #   enable = true;
-    #   doomPrivateDir = ./dotfiles/doom.d;
-    # };
   };
 }
