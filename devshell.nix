@@ -11,7 +11,7 @@ in
   checks.pre-commit-check = pre-commit;
   devShell = pkgs.mkShell {
     inherit (pre-commit) shellHook;
-    buildInputs = with pkgs; [ nixpkgs-fmt statix elvish ];
+    buildInputs = with pkgs; [ nixpkgs-fmt statix just ];
   };
   formatter = pkgs.nixpkgs-fmt;
   apps.home-manager = {
