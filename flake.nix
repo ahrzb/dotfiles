@@ -16,6 +16,9 @@
 
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     emacs-overlay.inputs.nixpkgs.follows = "nixpkgs";
+
+    kmonad.url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
+    kmonad.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = { self, nixpkgs, ... }@inputs:
     let
