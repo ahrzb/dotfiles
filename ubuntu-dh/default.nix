@@ -13,7 +13,6 @@ in
       ./packages.nix
       ./bash.nix
       ./python.nix
-      ./modules
       {
         nixpkgs.overlays = nixpkgs.lib.attrValues overlays;
         nix.registry = {
