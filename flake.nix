@@ -19,6 +19,9 @@
 
     kmonad.url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
     kmonad.inputs.nixpkgs.follows = "nixpkgs";
+
+    nixgl.url = "github:guibou/nixGL";
+    nixgl.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = { self, nixpkgs, ... }@inputs:
     let
