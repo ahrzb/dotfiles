@@ -52,7 +52,9 @@
     jsonnet # Purely-functional configuration language that helps you define JSON data
     comby # Tool for searching and changing code structure
     python3Packages.dunamai # Dynamic version generation
+    pyright # Type checker for the Python language
     glow # Render markdown on the CLI, with pizzazz!
+    pandoc # Conversion between documentation formats
 
     # Devtools, other
     asdf-vm # Manage multiple runtime versions with a single CLI tool
@@ -62,7 +64,7 @@
     zls # Zig LSP implementation + Zig Language Server
     gopls # Official language server for the Go language
     dart # Scalable programming language, with robust libraries and runtimes, for building web, server, and mobile apps
-    ((emacsPackagesFor emacs29).emacsWithPackages (epkgs: with epkgs; [ tree-sitter ])) # The extensible, customizable GNU text editor
+    ((emacsPackagesFor emacs29).emacsWithPackages (epkgs: with epkgs; [ vterm treesit-grammars.with-all-grammars ])) # The extensible, customizable GNU text editor
 
     # Nix utilities
     cachix # Command line client for Nix binary cache hosting https://cachix.org
