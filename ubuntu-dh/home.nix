@@ -49,6 +49,11 @@
     };
   };
 
+  services = {
+    safeeyes.enable = true;
+    emacs.enable = true;
+  };
+
   nixpkgs = {
     config = {
       allowUnfree = true;
