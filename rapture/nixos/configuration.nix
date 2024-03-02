@@ -50,7 +50,7 @@
 
       # Enable the KDE Plasma Desktop Environment.
       displayManager.sddm.enable = true;
-      desktopManager.plasma5.enable = true;
+      desktopManager.plasma6.enable = true;
 
       # Configure keymap in X11
       layout = "us";
@@ -106,6 +106,7 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
+    plasma5Packages.bismuth
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -198,5 +199,12 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
   security.polkit.enable = true;
+
+  xdg.portal.enable = true;
 }
