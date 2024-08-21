@@ -39,18 +39,15 @@
     variables = { };
   };
 
-  fonts = {
-    fontDir.enable = true;
-    fonts = with pkgs; [
-      samim-fonts
-      vazir-fonts
-      shabnam-fonts
-      sahel-fonts
-      parastoo-fonts
+  fonts.packages = with pkgs; [
+    samim-fonts
+    vazir-fonts
+    shabnam-fonts
+    sahel-fonts
+    parastoo-fonts
 
-      recursive
+    recursive
 
-      (nerdfonts.override { fonts = [ "Meslo" ]; })
-    ];
-  };
+    (nerdfonts.override { fonts = [ "Meslo" ]; })
+  ];
 }

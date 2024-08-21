@@ -18,10 +18,9 @@
     jq # jq for binary formats
     comby # Tool for searching and changing code structure
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
-    go_1_21 # The Go Programming language
+    go_1_22 # The Go Programming language
     rustup # The Rust toolchain installer
-    yarn # Fast, reliable, and secure dependency management for javascript
-    nodejs-18_x # Event-driven I/O framework for the V8 JavaScript engine
+    nodejs-slim_22 # Event-driven I/O framework for the V8 JavaScript engine
     nodePackages.pnpm # Fast, disk space efficient package manager for node
 
     statix # Lints and suggestions for the nix programming language

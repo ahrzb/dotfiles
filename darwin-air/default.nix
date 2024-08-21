@@ -44,4 +44,3 @@ in
     modules = [ ./darwin home-manager.darwinModules.home-manager home-manager-config registry ];
   };
 }
-

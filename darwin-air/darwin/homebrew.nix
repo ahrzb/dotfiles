@@ -8,13 +8,7 @@
     };
     taps = [
       "homebrew/bundle"
-      "homebrew/cask"
-      "homebrew/core"
       "homebrew/services"
-      {
-        name = "lencx/chatgpt";
-        clone_target = "https://github.com/lencx/chatgpt.git";
-      }
     ];
     brews = [ ];
     casks = [
@@ -42,10 +36,7 @@
       "visual-studio-code"
       "vlc"
       "whatsapp"
-      {
-        name = "chatgpt";
-        args = { no_quarantine = true; };
-      }
+      "chatgpt"
     ];
   };
 }

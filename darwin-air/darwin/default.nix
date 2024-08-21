@@ -1,1 +1,1 @@
-{ imports = [ ./modules ./homebrew.nix ./preferences.nix ]; }
+{ imports = [ ./homebrew.nix ./preferences.nix ]; }
