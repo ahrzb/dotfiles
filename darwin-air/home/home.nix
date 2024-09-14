@@ -30,4 +30,6 @@
       enableZshIntegration = true;
     };
   };
+
+  deliveryhero = { };
 }
