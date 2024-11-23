@@ -1,6 +1,6 @@
 {
   programs.kitty = {
-    theme = "Dracula";
+    themeFile = "Dracula";
     darwinLaunchOptions = [ "--start-as=fullscreen" ];
     settings = {
       "enabled_layouts" = "fat:bias=50;full_size=1;mirrored=false, tall:bias=50;full_size=1;mirrored=false, grid, horizontal, vertical";
@@ -8,7 +8,7 @@
     keybindings = {
       "alt+left" = "send_text all \\x1b\\x62";
       "alt+right" = "send_text all \\x1b\\x66";
-      "ctrl+l" = "combine : clear_terminal scrollback active : send_text terminal,application \\x63\\x6C\\x65\\x61\\x72\\x0A";
+      "ctrl+l" = "clear_terminal to_cursor_scroll active";
 
       # Switch layout
       "ctrl+k>l>l" = "next_layout";

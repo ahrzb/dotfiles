@@ -14,38 +14,38 @@ let
   inherit (lib) types mkEnableOption mkOption mkMerge mkIf;
 in
 {
-  options = {
-    deliveryhero = mkOption {
-      type = types.submodule {
-        options = {
-          disableKubeConfigEnv = mkEnableOption "Set KUBECONFIG to /dev/null";
-          logisticsConsolidatedConfig = {
-            enable =
-              mkEnableOption "Write consolidated kube config to ~/.kube/config";
-            logisticsKubernetesRef = mkOption {
-              type = types.str;
-              default = "master";
-            };
-            logisticsKubernetesRev = mkOption {
-              type = types.str;
-              description = "logistics-kubernetes repo revision to use";
-            };
+  options.deliveryhero = mkOption {
+    type = types.submodule {
+      options = {
+        disableKubeConfigEnv = mkEnableOption "Set KUBECONFIG to /dev/null";
+        logisticsConsolidatedConfig = {
+          enable =
+            mkEnableOption "Write consolidated kube config to ~/.kube/config";
+          logisticsKubernetesRef = mkOption {
+            type = types.str;
+            default = "master";
           };
-          logisticsSaml2awsConfig = {
-            enable = mkEnableOption
-              "Use saml2aws config from logistics-terraform repository";
-            logisticsTerraformRef = mkOption {
-              type = types.str;
-              default = "master";
-            };
-            logisticsTerraformRev = mkOption {
-              type = types.str;
-              description = "logistics-terraform repo revision to use";
-            };
+          logisticsKubernetesRev = mkOption {
+            type = types.str;
+            description = "logistics-kubernetes repo revision to use";
+            default = "";
+          };
+        };
+        logisticsSaml2awsConfig = {
+          enable = mkEnableOption
+            "Use saml2aws config from logistics-terraform repository";
+          logisticsTerraformRef = mkOption {
+            type = types.str;
+            default = "master";
+          };
+          logisticsTerraformRev = mkOption {
+            type = types.str;
+            description = "logistics-terraform repo revision to use";
           };
         };
       };
     };
+    default = { };
   };
 
   config = mkMerge [

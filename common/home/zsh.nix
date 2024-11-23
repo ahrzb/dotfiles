@@ -3,8 +3,8 @@ let
   zinit_home = pkgs.fetchFromGitHub {
     owner = "zdharma-continuum";
     repo = "zinit";
-    rev = "bcf70e8268dd09737d262919dcba0ff3301a705d";
-    sha256 = "sha256-WVolKlLL5FoD6sXBIbNOZtbbMdIcjbvzh5E2ad/74dI=";
+    rev = "c3469496455ea8b8ba184426c558e54817825bef";
+    sha256 = "sha256-ck+ifrf8wSIIzBEnbWrw52X1CY5Y0L1GIizsnr1+/w8=";
   };
 in
 {

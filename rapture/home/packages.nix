@@ -3,7 +3,7 @@
     discord # All-in-one cross-platform voice and text chat for gamers
     telegram-desktop # Telegram Desktop messaging app
     chromium # An open source web browser from Google
-    nvtop # A (h)top like task monitor for AMD, Adreno, Intel and NVIDIA GPUs
+    nvtopPackages.full # A (h)top like task monitor for AMD, Adreno, Intel and NVIDIA GPUs
     spotify # Play music from the Spotify music service
     obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
 
@@ -25,7 +25,7 @@
     jq # jq for binary formats
     comby # Tool for searching and changing code structure
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
-    go_1_21 # The Go Programming language
+    go_1_23 # The Go Programming language
     rustup # The Rust toolchain installer
     yarn # Fast, reliable, and secure dependency management for javascript
     nodejs-18_x # Event-driven I/O framework for the V8 JavaScript engine
