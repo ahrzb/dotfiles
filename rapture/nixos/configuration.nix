@@ -82,6 +82,8 @@
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
+  hardware.xpadneo.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
