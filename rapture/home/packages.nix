@@ -17,19 +17,23 @@
     fzf # A command-line fuzzy finder written in Go
     mosh # Mobile shell (ssh replacement)
 
-    docker-compose
+    vscode # Open source source code editor developed by Microsoft for Windows, Linux and macOS
+    emacs # Extensible, customizable GNU text editor
 
-    beancount # Double-entry bookkeeping computer language (py310-openssl broken)
+    docker-compose # Docker CLI plugin to define and run multi-container applications with Docker
 
     httpie # A command line HTTP client whose goal is to make CLI human-friendly (py310-openssl broken)
     jq # jq for binary formats
     comby # Tool for searching and changing code structure
     ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
+
     go_1_23 # The Go Programming language
     rustup # The Rust toolchain installer
     yarn # Fast, reliable, and secure dependency management for javascript
     nodejs-18_x # Event-driven I/O framework for the V8 JavaScript engine
     nodePackages.pnpm # Fast, disk space efficient package manager for node
+    deno # Secure runtime for JavaScript and TypeScript
+    uv # Extremely fast Python package installer and resolver, written in Rust
 
     statix # Lints and suggestions for the nix programming language
     nix-diff # Explain why two Nix derivations differ
