@@ -1,4 +1,4 @@
-{ nixpkgs, home-manager, ... }:
+{ nixpkgs, home-manager, ghostty, ... }:
 let
   system = "x86_64-linux";
 in
@@ -17,8 +17,9 @@ in
               imports = [ ./home ../common/home ];
             };
           };
-        }
-        {
+          nixpkgs.overlays = [
+            (self: super: { ghostty = ghostty.packages."${system}".default; })
+          ];
           nix.registry = {
             pkgs = {
               from = {

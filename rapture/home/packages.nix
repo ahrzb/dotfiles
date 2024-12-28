@@ -16,6 +16,7 @@
     fd # A simple, fast and user-friendly alternative to find
     fzf # A command-line fuzzy finder written in Go
     mosh # Mobile shell (ssh replacement)
+    ghostty # Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration
 
     vscode # Open source source code editor developed by Microsoft for Windows, Linux and macOS
     emacs # Extensible, customizable GNU text editor
