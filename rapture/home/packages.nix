@@ -35,6 +35,7 @@
     nodePackages.pnpm # Fast, disk space efficient package manager for node
     deno # Secure runtime for JavaScript and TypeScript
     uv # Extremely fast Python package installer and resolver, written in Rust
+    asdf-vm # Manage multiple runtime versions with a single CLI tool
 
     statix # Lints and suggestions for the nix programming language
     nix-diff # Explain why two Nix derivations differ
