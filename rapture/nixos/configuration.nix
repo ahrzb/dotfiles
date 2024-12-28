@@ -218,4 +218,8 @@
   security.polkit.enable = true;
 
   xdg.portal.enable = true;
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
 }
