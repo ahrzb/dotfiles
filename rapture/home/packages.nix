@@ -36,6 +36,7 @@
     deno # Secure runtime for JavaScript and TypeScript
     uv # Extremely fast Python package installer and resolver, written in Rust
     asdf-vm # Manage multiple runtime versions with a single CLI tool
+    devbox # Instant, easy, predictable shells and containers
 
     statix # Lints and suggestions for the nix programming language
     nix-diff # Explain why two Nix derivations differ
