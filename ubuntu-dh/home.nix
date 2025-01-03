@@ -28,7 +28,7 @@
 
     eza = {
       enable = true;
-      enableAliases = true;
+      enableBashIntegration = true;
     };
 
     direnv = {
@@ -44,14 +44,13 @@
       logisticsKubernetesRev = "05145624401662c2a8de89b8fb11bbe8c64d7db6";
     };
     logisticsSaml2awsConfig = {
-      enable = true;
-      logisticsTerraformRev = "b308d8b426ff864c3c9da9562e9c94b750ff663a";
+      enable = false;
+      logisticsTerraformRev = "4445f716268bb22aad9619d5fd2e32fda8c816d8";
     };
   };
 
   services = {
     safeeyes.enable = true;
-    emacs.enable = true;
   };
 
   nixpkgs = {
