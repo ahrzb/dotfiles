@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   home.packages = with pkgs; [
     argo # Container native workflow engine for Kubernetes
     aws-iam-authenticator # AWS IAM credentials for Kubernetes authentication
@@ -70,7 +70,7 @@
     # Nix utilities
     cachix # Command line client for Nix binary cache hosting https://cachix.org
     nix-diff # Explain why two Nix derivations differ
-    nixfmt # An opinionated formatter for Nix
+    nixfmt-classic # An opinionated formatter for Nix
     statix # Lints and suggestions for the nix programming language
 
     # Automation helpers
@@ -79,6 +79,7 @@
 
     docker-compose # Multi-container orchestration for Docker
 
-    ghostty
+    (config.lib.nixGL.wrap
+      ghostty) # Fast, native, feature-rich terminal emulator pushing modern features.
   ];
 }

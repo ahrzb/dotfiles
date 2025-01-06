@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, nixgl, ... }: {
   home = {
     stateVersion = "22.05";
     username = "a.roozbahani";
@@ -50,13 +50,7 @@
     };
   };
 
-  services = {
-    safeeyes.enable = true;
-  };
+  services = { safeeyes.enable = true; };
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
+  nixpkgs = { config = { allowUnfree = true; }; };
 }
