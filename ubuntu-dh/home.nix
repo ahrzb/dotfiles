@@ -18,6 +18,7 @@
     starship.enable = true;
     zoxide.enable = true;
     skim.enable = true;
+    atuin.enable = true;
     bat.enable = true;
     broot.enable = true;
     gh.enable = true;
