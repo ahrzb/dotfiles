@@ -81,5 +81,7 @@
 
     (config.lib.nixGL.wrap
       ghostty) # Fast, native, feature-rich terminal emulator pushing modern features.
+
+    nixGLIntel
   ];
 }
