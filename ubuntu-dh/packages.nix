@@ -3,7 +3,13 @@
     argo # Container native workflow engine for Kubernetes
     aws-iam-authenticator # AWS IAM credentials for Kubernetes authentication
     saml2aws # CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
-    google-cloud-sdk # Tools for the google cloud platform
+
+    # Tools for the google cloud platform
+    (
+      pkgs.google-cloud-sdk.withExtraComponents (with pkgs.google-cloud-sdk.components; [
+        gke-gcloud-auth-plugin
+      ])
+    )
 
     # The home-manager package overrides the credentials file and relies on credential_process feature
     # to be used for fetching credentials which saml2aws does not support for the time being
