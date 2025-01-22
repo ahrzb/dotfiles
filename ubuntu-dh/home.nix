@@ -43,7 +43,6 @@
     atuin.enable = true;
     bat.enable = true;
     broot.enable = true;
-    gh.enable = true;
     go.enable = true;
     jq.enable = true;
     k9s.enable = true;
