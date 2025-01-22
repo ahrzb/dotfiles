@@ -3,11 +3,14 @@
     stateVersion = "22.05";
     username = "a.roozbahani";
     homeDirectory = "/home/a.roozbahani";
+    sessionPath = [ "$HOME/.local/bin" ];
     sessionVariables = {
       LANG = "en_US.UTF-8";
       LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc ]}";
     };
   };
+
+  xdg = { userDirs = { enable = true; }; };
 
   programs = {
     home-manager.enable = true;
