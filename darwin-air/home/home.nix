@@ -1,4 +1,4 @@
-{
+{ config, ... }: {
   home = {
     stateVersion = "22.05";
     username = "ahrzb";
@@ -10,10 +10,14 @@
 
   programs = {
     git.enable = true;
-    kitty.enable = true;
     direnv.enable = true;
     neovim.enable = true;
-    zsh.enable = true;
+    zsh = {
+      enable = true;
+      profileExtra = ''
+        source "${config.xdg.configHome}/asdf-direnv/zshrc"
+      '';
+    };
 
     htop = {
       enable = true;
