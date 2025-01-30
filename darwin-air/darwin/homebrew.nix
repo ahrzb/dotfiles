@@ -1,19 +1,22 @@
 {
   homebrew = {
     enable = true;
-    global.brewfile = true;
+
+    global = {
+      brewfile = true;
+      autoUpdate = true;
+    };
+
     onActivation = {
       cleanup = "zap";
+      autoUpdate = true;
       upgrade = true;
     };
-    taps = [
-      "homebrew/bundle"
-      "homebrew/services"
-    ];
+
     brews = [ ];
+
     casks = [
       "1password"
-      "alfred"
       "anki"
       "calibre"
       "discord"
@@ -35,8 +38,14 @@
       "tiles"
       "visual-studio-code"
       "vlc"
+      "iina"
       "whatsapp"
       "chatgpt"
+      "windscribe"
+      "raycast"
+      "qbittorrent"
+      "ghostty"
+      "zen-browser"
     ];
   };
 }

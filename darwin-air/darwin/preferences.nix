@@ -51,6 +51,7 @@
 
     recursive
 
-    (nerdfonts.override { fonts = [ "Meslo" ]; })
+    nerd-fonts.meslo-lg
+    nerd-fonts.fira-code
   ];
 }
