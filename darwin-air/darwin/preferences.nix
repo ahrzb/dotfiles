@@ -1,4 +1,7 @@
 { pkgs, ... }: {
+  system.stateVersion = 5;
+  ids.gids.nixbld = 30000;
+
   users.users.ahrzb = {
     name = "ahrzb";
     home = "/Users/ahrzb";
