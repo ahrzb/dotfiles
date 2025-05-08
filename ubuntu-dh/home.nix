@@ -74,4 +74,11 @@
   services = { safeeyes.enable = true; };
 
   nixpkgs = { config = { allowUnfree = true; }; };
+
+  nix.gc = {
+    automatic = true;
+    persistent = true;
+    frequency = "daily";
+    options = "--delete-older-than 7d";
+  };
 }
