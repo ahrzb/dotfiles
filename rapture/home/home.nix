@@ -56,4 +56,11 @@
   services = {
     kdeconnect.enable = true;
   };
+
+  nix.gc = {
+    automatic = true;
+    persistent = true;
+    frequency = "daily";
+    options = "--delete-older-than 7d";
+  };
 }

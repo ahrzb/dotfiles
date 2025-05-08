@@ -101,7 +101,6 @@
     packages = with pkgs; [
       firefox
       kdePackages.kate
-      #  thunderbird
     ];
   };
 
@@ -236,5 +235,12 @@
       enable = true;
       defaultNetwork.settings.dns_enabled = true;
     };
+  };
+
+  nix.gc = {
+    automatic = true;
+    persistent = true;
+    dates = "daily";
+    options = "--delete-older-than 7d";
   };
 }
