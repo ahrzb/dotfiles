@@ -75,11 +75,13 @@
       # no need to redefine it in your config for now)
       #media-session.enable = true;
     };
+
+
+    pulseaudio.enable = false;
   };
 
   # Enable sound with pipewire.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
   hardware.xpadneo.enable = true;
@@ -98,7 +100,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
-      kate
+      kdePackages.kate
       #  thunderbird
     ];
   };
