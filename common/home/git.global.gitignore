@@ -3,4 +3,5 @@
 .devcontainer/
 .idea/
 .envrc
+.tool-versions
 *~
