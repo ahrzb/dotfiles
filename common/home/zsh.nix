@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
   zinit_home = pkgs.fetchFromGitHub {
     owner = "zdharma-continuum";
@@ -9,7 +9,7 @@ let
 in
 {
   programs.zsh = {
-    initExtraBeforeCompInit = ''
+    initContent = lib.mkOrder 550 ''
       [[ -f $HOME/.secrets ]] && source $HOME/.secrets
 
       export ZINIT_HOME="${zinit_home}"
