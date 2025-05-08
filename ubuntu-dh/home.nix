@@ -1,4 +1,4 @@
-{ pkgs, nixgl, ... }: {
+{ pkgs, lib, ... }: {
   home = {
     stateVersion = "22.05";
     username = "a.roozbahani";
@@ -16,7 +16,7 @@
     home-manager.enable = true;
     git.enable = true;
     zsh.enable = true;
-    zsh.initExtra = ''
+    zsh.initContent = lib.mkOrder 600 ''
       function gdp-access() {
         eval "$(dp-devinfra destinations access --export-env-vars "$1" "$2" "$3")"
       }
