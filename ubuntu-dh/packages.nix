@@ -59,9 +59,11 @@
     glow # Render markdown on the CLI, with pizzazz!
     pandoc # Conversion between documentation formats
     gnumake # A tool to control the generation of non-source files from sources
+    fzf # Command-line fuzzy finder written in Go
 
     # Programming
     asdf-vm # Manage multiple runtime versions with a single CLI tool
+    mise # Front-end to your dev env
     devbox # Instant, easy, predictable shells and containers
     rustup # The Rust toolchain installer
     evcxr # An evaluation context for Rust
