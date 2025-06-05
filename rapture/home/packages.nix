@@ -39,6 +39,7 @@
     devbox # Instant, easy, predictable shells and containers
     just # Handy way to save and run project-specific commands
     mise # Front-end to your dev env
+    claude-code # An agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster
 
     statix # Lints and suggestions for the nix programming language
     nix-diff # Explain why two Nix derivations differ
