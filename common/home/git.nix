@@ -16,15 +16,15 @@
         }
         {
           path = ./git.personal.gitconfig;
-          condition = "gitdir:~/repos/github.com/ahrzb/**";
+          condition = "gitdir:~/repos/github.com/**";
         }
         {
           path = ./git.personal.gitconfig;
-          condition = "gitdir:~/repos/gitlab.com/ahrzb/**";
+          condition = "gitdir:~/repos/gitlab.com/**";
         }
         {
           path = ./git.personal.gitconfig;
-          condition = "gitdir:~/repos/codeberg.org/ahrzb/**";
+          condition = "gitdir:~/repos/codeberg.org/**";
         }
       ];
     };

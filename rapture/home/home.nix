@@ -46,6 +46,7 @@
 
     ssh = {
       enable = true;
+      enableDefaultConfig = false;
       matchBlocks."*" = {
         host = "*";
         extraOptions.IdentityAgent = "~/.1password/agent.sock";
@@ -60,7 +61,7 @@
   nix.gc = {
     automatic = true;
     persistent = true;
-    frequency = "daily";
+    dates = "daily";
     options = "--delete-older-than 7d";
   };
 }
