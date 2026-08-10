@@ -14,7 +14,6 @@
       trusted-public-keys =
         [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
     };
-    configureBuildUsers = true;
     extraOptions = ''
       auto-optimise-store = true
       experimental-features = nix-command flakes
@@ -22,9 +21,8 @@
     '';
   };
 
-  services.nix-daemon.enable = true;
   system.keyboard.enableKeyMapping = true;
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   programs = {
     zsh = {
@@ -44,7 +42,7 @@
 
   fonts.packages = with pkgs; [
     samim-fonts
-    vazir-fonts
+    vazirmatn
     shabnam-fonts
     sahel-fonts
     parastoo-fonts

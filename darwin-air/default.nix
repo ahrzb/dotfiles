@@ -31,7 +31,7 @@ let
           type = "indirect";
         };
         to = {
-          path = nixpkgs;
+          path = nixpkgs.outPath;
           type = "path";
         };
       };
