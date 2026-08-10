@@ -1,10 +1,10 @@
 {
   programs = {
     ssh = {
-      matchBlocks."*" = {
-        host = "*";
-        extraOptions.IdentityAgent = "~/.1password/agent.sock";
-      };
+      # matchBlocks."*" = {
+      #   host = "*";
+      #   extraOptions.IdentityAgent = "~/.1password/agent.sock";
+      # };
     };
 
     starship = {
