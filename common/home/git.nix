@@ -1,11 +1,11 @@
 {
   programs = {
     git = {
-      aliases = {
-        co = "checkout";
-        lg = "log --oneline --decorate --graph";
-      };
-      extraConfig = {
+      settings = {
+        alias = {
+          co = "checkout";
+          lg = "log --oneline --decorate --graph";
+        };
         core.excludesfile = "${./git.global.gitignore}";
         push.autoSetupRemote = true;
       };
