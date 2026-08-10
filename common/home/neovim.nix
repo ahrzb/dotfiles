@@ -2,10 +2,12 @@
   programs = {
     neovim = {
       defaultEditor = true;
+      withRuby = false;
+      withPython3 = false;
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
-      extraLuaConfig = ''
+      initLua = ''
         vim.cmd [[colorscheme dracula]]
       '';
 
