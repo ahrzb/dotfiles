@@ -15,6 +15,7 @@
   programs = {
     home-manager.enable = true;
     git.enable = true;
+    git.lfs.enable = true;
     zsh.enable = true;
     zsh.initContent = lib.mkOrder 600 ''
       function gdp-access() {
