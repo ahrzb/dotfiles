@@ -21,6 +21,7 @@
     nixgl.inputs.nixpkgs.follows = "nixpkgs";
 
     ghostty.url = "github:ghostty-org/ghostty";
+    ghostty.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = { self, nixpkgs, ... }@inputs:
     let
