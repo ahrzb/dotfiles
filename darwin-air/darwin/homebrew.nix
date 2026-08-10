@@ -1,16 +1,16 @@
 {
   homebrew = {
-    enable = true;
+    enable = false;
 
     global = {
       brewfile = true;
-      autoUpdate = true;
+      autoUpdate = false;
     };
 
     onActivation = {
       cleanup = "zap";
-      autoUpdate = true;
-      upgrade = true;
+      autoUpdate = false;
+      upgrade = false;
     };
 
     brews = [ ];
@@ -19,6 +19,7 @@
       "1password"
       "anki"
       "calibre"
+      "claude"
       "discord"
       "docker"
       "figma"
