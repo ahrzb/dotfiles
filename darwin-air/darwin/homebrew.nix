@@ -1,6 +1,6 @@
 {
   homebrew = {
-    enable = false;
+    enable = true;
 
     global = {
       brewfile = true;
@@ -19,34 +19,36 @@
       "1password"
       "anki"
       "calibre"
+      "chatgpt"
       "claude"
       "discord"
-      "docker"
+      "docker-desktop"
       "figma"
       "firefox"
+      "ghostty"
       "google-chrome"
       "google-drive"
+      "iina"
       "mendeley"
       "minecraft"
       "notion"
+      "qbittorrent"
+      "raycast"
       "skype"
       "spotify"
       "steam"
-      "syncthing"
+      "syncthing-app"
       "talon"
       "telegram"
       "ticktick"
       "tiles"
       "visual-studio-code"
       "vlc"
-      "iina"
+      "vorssaint"
       "whatsapp"
-      "chatgpt"
       "windscribe"
-      "raycast"
-      "qbittorrent"
-      "ghostty"
-      "zen-browser"
+      "zed"
+      "zen"
     ];
   };
 }
