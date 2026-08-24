@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   system.stateVersion = 5;
+  system.primaryUser = "ahrzb";
   ids.gids.nixbld = 30000;
 
   users.users.ahrzb = {
