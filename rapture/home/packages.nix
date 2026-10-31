@@ -1,64 +1,50 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
-    discord # All-in-one cross-platform voice and text chat for gamers
-    telegram-desktop # Telegram Desktop messaging app
-    chromium # An open source web browser from Google
-    vivaldi # Browser for our Friends, powerful and personal
-    nvtopPackages.full # A (h)top like task monitor for AMD, Adreno, Intel and NVIDIA GPUs
-    spotify # Play music from the Spotify music service
-    obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
-    vlc # Cross-platform media player and streaming server
-    ffmpeg # Complete, cross-platform solution to record, convert and stream audio and video
+    # Desktop
+    chromium
+    discord
+    obsidian
+    slack
+    spotify
+    telegram-desktop
+    vivaldi
+    vlc
 
-    coreutils # The basic file, shell and text manipulation utilities of the GNU operating system
-    curl # A command line tool for transferring files with URL syntax
-    wget # Pure python download utility
-    xz # A general-purpose data compression software, successor of LZMA
-    tree # Command to produce a depth indented directory listing
-    aria2 # A lightweight, multi-protocol, multi-source, command-line download utility
-    fd # A simple, fast and user-friendly alternative to find
-    fzf # A command-line fuzzy finder written in Go
-    mosh # Mobile shell (ssh replacement)
-    ghostty # Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration
+    # System
+    ffmpeg
+    nvtopPackages.full
+    ventoy
 
-    vscode # Open source source code editor developed by Microsoft for Windows, Linux and macOS
-    code-cursor # AI-powered code editor built on vscode
-    cursor-cli # Cursor CLI
-    claude-code # An agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster
-    emacs # Extensible, customizable GNU text editor
+    # Editors and terminals
+    android-studio
+    claude-code
+    code-cursor
+    cursor-cli
+    emacs
+    ghostty
+    vscode
 
-    docker-compose # Docker CLI plugin to define and run multi-container applications with Docker
+    # Development
+    asdf-vm
+    deno
+    devbox
+    docker-compose
+    go
+    mise
+    nodejs_latest
+    pnpm
+    rustup
+    uv
+    yarn
 
-    httpie # A command line HTTP client whose goal is to make CLI human-friendly (py310-openssl broken)
-    jq # jq for binary formats
-    # comby # Tool for searching and changing code structure
-    ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
+    # Audio
+    guitarix
+    qpwgraph
+    reaper
+    reaper-reapack-extension
 
-    go # The Go Programming language
-    rustup # The Rust toolchain installer
-    yarn # Fast, reliable, and secure dependency management for javascript
-    nodejs_latest # Event-driven I/O framework for the V8 JavaScript engine
-    pnpm # Fast, disk space efficient package manager for node
-    deno # Secure runtime for JavaScript and TypeScript
-    uv # Extremely fast Python package installer and resolver, written in Rust
-    asdf-vm # Manage multiple runtime versions with a single CLI tool
-    devbox # Instant, easy, predictable shells and containers
-    just # Handy way to save and run project-specific commands
-    mise # Front-end to your dev env
-
-    statix # Lints and suggestions for the nix programming language
-    nix-diff # Explain why two Nix derivations differ
-
-    code-cursor # AI-powered code editor built on vscode
-    android-studio # Official IDE for Android (stable channel)
-    slack # Desktop client for Slack
-
-    guitarix # Virtual guitar amplifier for Linux running with JACK
-    reaper # Digital audio workstation
-    reaper-reapack-extension # Package manager for REAPER
-    qpwgraph # Qt graph manager for PipeWire, similar to QjackCtl
-
-    augustus # Open source re-implementation of Caesar III. Fork of Julius incorporating gameplay changes
-    ventoy # New Bootable USB Solution
+    # Games
+    augustus
   ];
 }

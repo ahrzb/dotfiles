@@ -1,9 +1,12 @@
+# Enabled on every host: cli, git, neovim, ssh, zsh.
+# Opt-in per host (`programs.<name>.enable = true`): kitty.
 {
   imports = [
-    ./home.nix
+    ./cli.nix
+    ./git.nix
     ./kitty.nix
     ./neovim.nix
-    ./git.nix
+    ./ssh.nix
     ./zsh.nix
   ];
 }

@@ -1,11 +1,36 @@
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    aria2
+    coreutils
+    curl
+    fd
+    httpie
+    jq
+    just
+    mosh
+    nix-diff
+    ripgrep
+    statix
+    tree
+    wget
+    xz
+  ];
+
   programs = {
-    ssh = {
-      # matchBlocks."*" = {
-      #   host = "*";
-      #   extraOptions.IdentityAgent = "~/.1password/agent.sock";
-      # };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
     };
+
+    fzf.enable = true;
+
+    htop = {
+      enable = true;
+      settings.show_program_path = true;
+    };
+
+    zoxide.enable = true;
 
     starship = {
       enable = true;
