@@ -38,7 +38,7 @@
     rustup # The Rust toolchain installer
     yarn # Fast, reliable, and secure dependency management for javascript
     nodejs_latest # Event-driven I/O framework for the V8 JavaScript engine
-    nodePackages.pnpm # Fast, disk space efficient package manager for node
+    pnpm # Fast, disk space efficient package manager for node
     deno # Secure runtime for JavaScript and TypeScript
     uv # Extremely fast Python package installer and resolver, written in Rust
     asdf-vm # Manage multiple runtime versions with a single CLI tool
