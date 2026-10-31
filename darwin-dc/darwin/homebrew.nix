@@ -10,10 +10,11 @@
       "firefox"
       "ghostty"
       "google-chrome"
+      "notion"
       "raycast"
       "slack"
-      "tiles"
       "visual-studio-code"
+      "vorssaint"
       "zed"
     ];
   };
