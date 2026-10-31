@@ -29,6 +29,7 @@ in
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.meslo-lg
+    nerd-fonts.iosevka
   ];
 
   # Installs and pins Homebrew itself; existing installs are adopted.

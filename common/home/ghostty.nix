@@ -5,7 +5,7 @@
     package = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin null;
     settings = {
       theme = "Dracula";
-      font-family = "FiraCode Nerd Font Mono";
+      font-family = "Iosevka Nerd Font Mono";
       font-size = 14;
       macos-option-as-alt = true;
     };
