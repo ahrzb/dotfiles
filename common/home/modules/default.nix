@@ -1,1 +1,0 @@
-{ imports = [ ./deliveryhero.nix ]; }

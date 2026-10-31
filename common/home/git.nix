@@ -11,10 +11,6 @@
       };
       includes = [
         {
-          path = ./git.deliveryhero.gitconfig;
-          condition = "gitdir:~/repos/github.com/deliveryhero/**";
-        }
-        {
           path = ./git.personal.gitconfig;
           condition = "gitdir:~/repos/github.com/**";
         }

@@ -23,14 +23,14 @@
     ghostty.url = "github:ghostty-org/ghostty";
     ghostty.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       inherit (nixpkgs.lib) foldl recursiveUpdate;
       entrypoints = [
         ./devshell.nix
         ./darwin-air
         ./rapture
-        ./ubuntu-dh
       ];
     in
     foldl (outputs: path: recursiveUpdate outputs (import path inputs)) { } entrypoints;

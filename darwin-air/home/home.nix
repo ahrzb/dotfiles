@@ -26,7 +26,9 @@
 
     htop = {
       enable = true;
-      settings = { show_program_path = true; };
+      settings = {
+        show_program_path = true;
+      };
     };
 
     starship = {
@@ -39,6 +41,4 @@
       enableZshIntegration = true;
     };
   };
-
-  deliveryhero = { };
 }

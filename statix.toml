@@ -1,6 +1,6 @@
-ignore = [
-  "rapture/nixos/hardware-configuration.nix",
-  "linux-legacy",
-  "darwin-dh"
+disabled = [
+  "repeated_keys" # `hardware.x = ...; hardware.y = ...;` is the NixOS-generated style
 ]
-
+ignore = [
+  "rapture/nixos/hardware-configuration.nix"
+]
