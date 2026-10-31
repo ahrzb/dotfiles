@@ -23,5 +23,9 @@ sudo ./result/sw/bin/darwin-rebuild switch --flake .#dc-ahrzb-mbp
 
 * 1Password: enable *Settings → Developer → Use the SSH agent* and *Integrate with 1Password CLI*. SSH uses the 1Password agent for every host.
 * AWS: `granted sso populate --sso-region <region> <start-url>` writes `~/.aws/config` profiles; switch with `assume <profile>`.
-* GitHub: `gh auth login`. Repos under `~/repos/github.com/DataChefHQ/` commit as the DataChef identity; anywhere outside `~/repos/<host>/`, git refuses to commit (no global email).
+* Identities: work by default under `~/repos/<host>/`; `~/repos/<host>/ahrzb/` is personal. That switches the git email, the gh account (`~/.config/gh-personal`, also used by git for HTTPS pushes) and the omp profile (`~/.omp/profiles/personal`). Outside `~/repos/<host>/`, git refuses to commit (no global email).
+  * GitHub: `gh auth login` anywhere for the work account, and once more from inside `~/repos/github.com/ahrzb/` for the personal one.
+  * omp: log in once in each place the same way.
+* Shell: Ghostty starts a login zsh (environment) that execs nushell. `assume` works in nu too.
 * Projects: DataChef repos use devenv + direnv; run `direnv allow` once per repo.
+* Building omp: it isn't in any binary cache, so the first build compiles it (about 15 min on this machine).

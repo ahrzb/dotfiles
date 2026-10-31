@@ -1,7 +1,3 @@
-let
-  personal.user.email = "ahrzb5@gmail.com";
-  datachef.user.email = "amirhossein.r@datachef.co";
-in
 {
   programs.git = {
     enable = true;
@@ -20,7 +16,7 @@ in
     settings = {
       user = {
         name = "AmirHossein Roozbahani";
-        # No global email: committing outside ~/repos/<host>/ fails instead of using the wrong identity.
+        # No global email: outside ~/repos/<host>/ commits fail instead of using the wrong identity (see identity.nix).
         useConfigOnly = true;
       };
       alias = {
@@ -29,24 +25,5 @@ in
       };
       push.autoSetupRemote = true;
     };
-
-    # Later includes override earlier ones: catch-all hosts first, specific orgs after.
-    includes =
-      map
-        (host: {
-          condition = "gitdir:~/repos/${host}/**";
-          contents = personal;
-        })
-        [
-          "github.com"
-          "gitlab.com"
-          "codeberg.org"
-        ]
-      ++ [
-        {
-          condition = "gitdir/i:~/repos/github.com/DataChefHQ/**";
-          contents = datachef;
-        }
-      ];
   };
 }
