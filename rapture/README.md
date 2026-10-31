@@ -3,11 +3,6 @@
 ### Installation
 
 ```sh
-# install nixos system
-sudo nixos-rebuild switch --flake .
-
-# install home-manager
-nix run .#sync
-# or alternatively install home-manager and run
-home-manager switch --flake .
+# NixOS + home-manager (NixOS module) in one step; afterwards use `just sync`
+sudo nixos-rebuild switch --flake .#rapture
 ```

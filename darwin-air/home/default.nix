@@ -1,5 +1,6 @@
-{ config, pkgs, lib, ... }:
-
 {
-  imports = [ ./home.nix ./packages.nix ];
+  imports = [
+    ./home.nix
+    ./packages.nix
+  ];
 }

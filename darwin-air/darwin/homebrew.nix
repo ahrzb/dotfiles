@@ -1,19 +1,9 @@
 {
   homebrew = {
-    enable = true;
-
-    global = {
-      brewfile = true;
-      autoUpdate = false;
-    };
-
     onActivation = {
       cleanup = "zap";
-      autoUpdate = false;
       upgrade = false;
     };
-
-    brews = [ ];
 
     casks = [
       "1password"

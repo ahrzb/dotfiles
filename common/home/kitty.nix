@@ -3,7 +3,8 @@
     themeFile = "Dracula";
     darwinLaunchOptions = [ "--start-as=fullscreen" ];
     settings = {
-      "enabled_layouts" = "fat:bias=50;full_size=1;mirrored=false, tall:bias=50;full_size=1;mirrored=false, grid, horizontal, vertical";
+      "enabled_layouts" =
+        "fat:bias=50;full_size=1;mirrored=false, tall:bias=50;full_size=1;mirrored=false, grid, horizontal, vertical";
     };
     keybindings = {
       "alt+left" = "send_text all \\x1b\\x62";

@@ -1,12 +1,8 @@
 {
   description = "AmirHossein's setups";
+
   inputs = {
-    flake-utils.url = "github:numtide/flake-utils";
-
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-
-    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
-    pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-darwin.url = "github:lnl7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -14,24 +10,66 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
-    emacs-overlay.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
-    nixgl.url = "github:guibou/nixGL";
-    nixgl.inputs.nixpkgs.follows = "nixpkgs";
+    git-hooks.url = "github:cachix/git-hooks.nix";
+    git-hooks.inputs.nixpkgs.follows = "nixpkgs";
 
     ghostty.url = "github:ghostty-org/ghostty";
     ghostty.inputs.nixpkgs.follows = "nixpkgs";
   };
+
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      nix-darwin,
+      git-hooks,
+      ...
+    }@inputs:
     let
-      inherit (nixpkgs.lib) foldl recursiveUpdate;
-      entrypoints = [
-        ./devshell.nix
-        ./darwin-air
-        ./rapture
+      inherit (import ./lib.nix inputs) mkDarwin mkNixos;
+      forAllSystems = nixpkgs.lib.genAttrs [
+        "aarch64-darwin"
+        "x86_64-linux"
       ];
     in
-    foldl (outputs: path: recursiveUpdate outputs (import path inputs)) { } entrypoints;
+    {
+      darwinConfigurations = {
+        "AmirHosseins-MacBook-Air" = mkDarwin ./darwin-air;
+      };
+
+      nixosConfigurations.rapture = mkNixos ./rapture;
+
+      checks = forAllSystems (system: {
+        pre-commit = git-hooks.lib.${system}.run {
+          src = ./.;
+          hooks = {
+            nixfmt.enable = true;
+            statix.enable = true;
+          };
+        };
+      });
+
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+          pre-commit = self.checks.${system}.pre-commit;
+        in
+        {
+          default = pkgs.mkShell {
+            inherit (pre-commit) shellHook;
+            packages = pre-commit.enabledPackages ++ [ pkgs.just ];
+          };
+        }
+      );
+
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
+
+      apps.aarch64-darwin.darwin-rebuild = {
+        type = "app";
+        program = "${nix-darwin.packages.aarch64-darwin.darwin-rebuild}/bin/darwin-rebuild";
+      };
+    };
 }
