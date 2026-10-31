@@ -37,6 +37,7 @@
     {
       darwinConfigurations = {
         "AmirHosseins-MacBook-Air" = mkDarwin ./darwin-air;
+        "dc-ahrzb-mbp" = mkDarwin ./darwin-dc;
       };
 
       nixosConfigurations.rapture = mkNixos ./rapture;
