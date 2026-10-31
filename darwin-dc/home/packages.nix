@@ -5,6 +5,9 @@
     # AWS
     awscli2
 
+    # Google Cloud; the GKE plugin lets kubectl authenticate to GKE clusters
+    (google-cloud-sdk.withExtraComponents [ google-cloud-sdk.components.gke-gcloud-auth-plugin ])
+
     # IaC
     opentofu
     terraform
