@@ -8,12 +8,18 @@
   # `nixpkgs` is registered automatically; `pkgs` is a shorter alias, e.g. `nix shell pkgs#jq`.
   nix.registry.pkgs.flake = inputs.nixpkgs;
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [ inputs.omp.overlays.default ];
+  };
 
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "hm-backup";
-    sharedModules = [ ./home ];
+    sharedModules = [
+      inputs.omp.homeManagerModules.default
+      ./home
+    ];
   };
 }

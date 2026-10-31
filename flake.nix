@@ -12,6 +12,8 @@
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
+    omp.url = "github:can1357/oh-my-pi";
+
     git-hooks.url = "github:cachix/git-hooks.nix";
     git-hooks.inputs.nixpkgs.follows = "nixpkgs";
 

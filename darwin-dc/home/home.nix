@@ -6,6 +6,7 @@
     gh.enable = true;
     # `assume <profile>`; generate ~/.aws/config profiles with `granted sso populate`.
     granted.enable = true;
+    omp.enable = true;
     k9s.enable = true;
   };
 }
