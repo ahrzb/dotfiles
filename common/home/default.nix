@@ -1,4 +1,4 @@
-# Enabled on every host: cli, git, neovim, ssh, zsh.
+# Enabled on every host: cli, git, neovim, nushell, ssh, zsh.
 # Opt-in per host (`programs.<name>.enable = true`): ghostty, kitty.
 {
   imports = [
@@ -7,6 +7,7 @@
     ./git.nix
     ./kitty.nix
     ./neovim.nix
+    ./nushell.nix
     ./ssh.nix
     ./zsh.nix
   ];
