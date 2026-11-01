@@ -26,6 +26,7 @@
       "notion"
       "raycast"
       "slack"
+      "spotify"
       "visual-studio-code"
       "vorssaint"
       "zed"
