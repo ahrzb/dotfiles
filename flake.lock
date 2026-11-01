@@ -391,6 +391,22 @@
         "type": "github"
       }
     },
+    "omp-theme-titanium-dracula": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785299849,
+        "narHash": "sha256-JucNGY9lKLgxdxdtNVlXvn8xIYdYz9hZq2L+OBHpGqY=",
+        "owner": "everton-dgn",
+        "repo": "omp-theme-titanium-dracula",
+        "rev": "a33e928a202230b1dcb08f598ce48d1c823eb8e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "everton-dgn",
+        "repo": "omp-theme-titanium-dracula",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "dracula-zed": "dracula-zed",
@@ -400,7 +416,8 @@
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs",
-        "omp": "omp"
+        "omp": "omp",
+        "omp-theme-titanium-dracula": "omp-theme-titanium-dracula"
       }
     },
     "rust-overlay": {

@@ -9,6 +9,7 @@
     ./kitty.nix
     ./neovim.nix
     ./nushell.nix
+    ./omp.nix
     ./ssh.nix
     ./zed.nix
     ./zsh.nix

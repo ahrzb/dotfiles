@@ -22,6 +22,9 @@
 
     dracula-zed.url = "github:dracula/zed";
     dracula-zed.flake = false;
+
+    omp-theme-titanium-dracula.url = "github:everton-dgn/omp-theme-titanium-dracula";
+    omp-theme-titanium-dracula.flake = false;
   };
 
   outputs =
