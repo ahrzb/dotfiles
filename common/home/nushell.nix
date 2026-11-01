@@ -5,6 +5,8 @@
   programs.nushell = {
     enable = true;
     settings.show_banner = false;
+    # zsh already exports the session environment before exec'ing nu.
+    loadSessionVariables = false;
     extraConfig = lib.mkIf config.programs.granted.enable (builtins.readFile ./assume.nu);
   };
 
