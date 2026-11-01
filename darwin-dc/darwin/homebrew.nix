@@ -22,6 +22,7 @@
       "firefox"
       "ghostty"
       "google-chrome"
+      "helium-browser"
       "notion"
       "raycast"
       "slack"
