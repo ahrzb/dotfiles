@@ -24,6 +24,20 @@
         lg = "log --oneline --decorate --graph";
       };
       push.autoSetupRemote = true;
+      fetch.prune = true;
+      # Remember conflict resolutions and replay them on the next rebase/merge.
+      rerere.enabled = true;
+      diff.algorithm = "histogram";
+    };
+  };
+
+  # Syntax-highlighted diffs in git's pager; n/N jump between files.
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      navigate = true;
+      syntax-theme = "Dracula";
     };
   };
 }
