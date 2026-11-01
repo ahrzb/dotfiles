@@ -80,6 +80,22 @@
         "type": "github"
       }
     },
+    "dracula-zed": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786357478,
+        "narHash": "sha256-KyZA1GjPUzfRjYCiJ27MVWkXhrnu9k9wHerSZNkffn4=",
+        "owner": "dracula",
+        "repo": "zed",
+        "rev": "c419d710e77f22ec4e4e8481324b93ef0916d368",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dracula",
+        "repo": "zed",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -377,6 +393,7 @@
     },
     "root": {
       "inputs": {
+        "dracula-zed": "dracula-zed",
         "ghostty": "ghostty",
         "git-hooks": "git-hooks",
         "home-manager": "home-manager_2",

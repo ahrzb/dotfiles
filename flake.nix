@@ -19,6 +19,9 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
     ghostty.inputs.nixpkgs.follows = "nixpkgs";
+
+    dracula-zed.url = "github:dracula/zed";
+    dracula-zed.flake = false;
   };
 
   outputs =

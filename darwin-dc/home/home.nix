@@ -11,5 +11,6 @@
     granted.enable = true;
     omp.enable = true;
     k9s.enable = true;
+    zed-editor.enable = true;
   };
 }

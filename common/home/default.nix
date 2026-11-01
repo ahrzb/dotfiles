@@ -1,5 +1,5 @@
 # Enabled on every host: cli, git, identity, neovim, nushell, ssh, zsh.
-# Opt-in per host (`programs.<name>.enable = true`): ghostty, kitty, omp.
+# Opt-in per host (`programs.<name>.enable = true`): ghostty, kitty, omp, zed-editor.
 {
   imports = [
     ./cli.nix
@@ -10,6 +10,7 @@
     ./neovim.nix
     ./nushell.nix
     ./ssh.nix
+    ./zed.nix
     ./zsh.nix
   ];
 }
