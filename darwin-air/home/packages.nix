@@ -4,7 +4,7 @@
     asdf-vm
     beancount
     docker-compose
-    go_1_25
+    go
     m-cli
     nodejs-slim_22
     pnpm
