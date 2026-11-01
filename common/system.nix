@@ -20,6 +20,7 @@
     backupFileExtension = "hm-backup";
     sharedModules = [
       inputs.omp.homeManagerModules.default
+      inputs.nix-index-database.homeModules.nix-index
       ./home
     ];
   };

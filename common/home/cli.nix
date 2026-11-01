@@ -25,6 +25,11 @@
 
     fzf.enable = true;
 
+    # Prebuilt nixpkgs file index: `nix-locate`, command-not-found suggestions,
+    # and `, <cmd>` to run any nixpkgs command without installing it.
+    nix-index.enable = true;
+    nix-index-database.comma.enable = true;
+
     htop = {
       enable = true;
       settings.show_program_path = true;
