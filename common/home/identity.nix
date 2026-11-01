@@ -53,13 +53,21 @@ let
     };
 in
 {
-  options.identity.default = lib.mkOption {
-    type = lib.types.enum [
-      "personal"
-      "work"
-    ];
-    default = "personal";
-    description = "Identity used under ~/repos/<host>/ outside the other identity's directories.";
+  options.identity = {
+    default = lib.mkOption {
+      type = lib.types.enum [
+        "personal"
+        "work"
+      ];
+      default = "personal";
+      description = "Identity used under ~/repos/<host>/ outside the other identity's directories.";
+    };
+    other = lib.mkOption {
+      type = lib.types.str;
+      readOnly = true;
+      default = other;
+      description = "The non-default identity; also the name of its omp profile.";
+    };
   };
 
   config = {
