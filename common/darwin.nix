@@ -23,6 +23,19 @@ in
     reattach = true; # Touch ID inside tmux/screen
   };
 
+  # Print the package diff of every switch. Remember the old system first: reloading the
+  # activate-system launchd job mid-activation already repoints /run/current-system.
+  system.activationScripts = {
+    preActivation.text = ''
+      oldSystem=$(readlink -f /run/current-system || true)
+    '';
+    postActivation.text = ''
+      if [[ -n "$oldSystem" ]]; then
+        ${pkgs.nvd}/bin/nvd --nix-bin-dir=${config.nix.package}/bin diff "$oldSystem" "$systemConfig"
+      fi
+    '';
+  };
+
   # Login shell setup (Nix PATH in /etc/zshrc); interactive config lives in home-manager.
   programs.zsh.enable = true;
 
