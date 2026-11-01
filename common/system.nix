@@ -16,6 +16,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
     backupFileExtension = "hm-backup";
     sharedModules = [
       inputs.omp.homeManagerModules.default
