@@ -13,4 +13,8 @@
     k9s.enable = true;
     zed-editor.enable = true;
   };
+
+  # Screen saver after 10 idle minutes; the password is already required immediately
+  # (`sysadminctl -screenLock status`). Display sleep (pmset) is left at macOS defaults.
+  targets.darwin.currentHostDefaults."com.apple.screensaver".idleTime = 600;
 }
