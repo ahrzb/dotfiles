@@ -7,9 +7,7 @@
   # `op` in /usr/local/bin: the only path the 1Password app trusts for CLI integration.
   programs._1password.enable = true;
 
-  # Sprinto (Dr. Sprinto) checks that the firewall is on.
-  networking.applicationFirewall = {
-    enable = true;
-    enableStealthMode = true;
-  };
+  # Firewall, screen-lock password, guest account and FileVault are enforced by the
+  # DataChef Fleet MDM profiles (`system_profiler SPConfigurationProfileDataType`);
+  # don't set them here. MDM pins the firewall on with stealth mode off.
 }

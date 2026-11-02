@@ -14,7 +14,8 @@
     zed-editor.enable = true;
   };
 
-  # Screen saver after 10 idle minutes; the password is already required immediately
-  # (`sysadminctl -screenLock status`). Display sleep (pmset) is left at macOS defaults.
+  # Screen saver after 10 idle minutes. The MDM password policy caps inactivity at
+  # 15 minutes and requires the password immediately, so keep this at or below 900.
+  # Display sleep (pmset) is left at macOS defaults.
   targets.darwin.currentHostDefaults."com.apple.screensaver".idleTime = 600;
 }
