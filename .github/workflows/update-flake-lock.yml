@@ -1,0 +1,73 @@
+# Weekly `nix flake update`. Opens (or refreshes) a PR only when the darwin hosts build and
+# every config evaluates; a failed run is emailed instead. Builds happen here because PRs
+# opened with GITHUB_TOKEN don't trigger other workflows.
+name: Update flake.lock
+
+on:
+  schedule:
+    - cron: "0 4 * * 1" # Mondays 04:00 UTC
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: update-flake-lock
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: macos-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update inputs
+        id: update
+        run: |
+          nix flake update 2>&1 | tee "$RUNNER_TEMP/update.log"
+          if git diff --quiet flake.lock; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Builds the pre-commit check and evaluates rapture (its 19 GiB closure doesn't fit a runner).
+      - name: Check flake
+        if: steps.update.outputs.changed == 'true'
+        run: nix flake check
+
+      - name: Build darwin hosts
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          nix build --no-link --print-build-logs \
+            .#darwinConfigurations.dc-ahrzb-mbp.system \
+            .#darwinConfigurations.AmirHosseins-MacBook-Air.system
+          df -h /nix
+
+      - name: Write PR body
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          {
+            echo "Darwin hosts build; \`nix flake check\` passes (rapture evaluated, not built)."
+            echo
+            echo '```'
+            grep -E "^(• |    '|  → )" "$RUNNER_TEMP/update.log"
+            echo '```'
+          } > "$RUNNER_TEMP/pr-body.md"
+
+      - uses: peter-evans/create-pull-request@v8
+        if: steps.update.outputs.changed == 'true'
+        with:
+          add-paths: flake.lock
+          branch: update-flake-lock
+          delete-branch: true
+          commit-message: "flake: Update inputs"
+          title: "flake: Update inputs"
+          body-path: ${{ runner.temp }}/pr-body.md
