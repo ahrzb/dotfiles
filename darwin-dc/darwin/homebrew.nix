@@ -18,6 +18,7 @@
     casks = [
       "1password"
       "claude"
+      "clockify"
       "docker-desktop"
       "firefox"
       "ghostty"
