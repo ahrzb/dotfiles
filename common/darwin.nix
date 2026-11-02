@@ -14,7 +14,11 @@ in
     optimise.automatic = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 14d";
+      interval = {
+        Hour = 3;
+        Minute = 15;
+      };
+      options = "--delete-older-than 7d";
     };
   };
 
