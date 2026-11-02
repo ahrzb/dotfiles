@@ -1,6 +1,7 @@
 # Two identities, selected by directory under ~/repos/<host>/:
 # the host's `identity.default` everywhere, the other one inside its own directories.
-# Switches git email (includeIf), the gh account (GH_CONFIG_DIR) and the omp profile (OMP_PROFILE).
+# Switches the git email (includeIf) and the omp profile (OMP_PROFILE). GitHub uses one
+# account everywhere, so gh isn't switched.
 {
   config,
   lib,
@@ -81,11 +82,6 @@ in
         condition = "gitdir/i:~/repos/${dir}/**";
         contents.user.email = identities.${other}.email;
       }) identities.${other}.dirs;
-
-    # gh is also git's credential helper for github.com, so pushes follow the same account.
-    programs.gh.package = withIdentityEnv pkgs.gh "gh" {
-      GH_CONFIG_DIR = "$HOME/.config/gh-${other}";
-    };
 
     programs.omp.package = withIdentityEnv pkgs.omp "omp" { OMP_PROFILE = other; };
   };

@@ -1,7 +1,7 @@
 {
   home.stateVersion = "26.05";
 
-  # Work identity by default; ~/repos/<host>/ahrzb/ switches git, gh and omp to personal.
+  # Work identity by default; ~/repos/<host>/ahrzb/ switches the git email and omp to personal.
   identity.default = "work";
 
   programs = {

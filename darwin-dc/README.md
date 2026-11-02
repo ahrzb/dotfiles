@@ -23,9 +23,9 @@ sudo ./result/sw/bin/darwin-rebuild switch --flake .#dc-ahrzb-mbp
 
 * 1Password: enable *Settings → Developer → Use the SSH agent* and *Integrate with 1Password CLI*. SSH uses the 1Password agent for every host.
 * AWS: `granted sso populate --sso-region <region> <start-url>` writes `~/.aws/config` profiles; switch with `assume <profile>`.
-* Identities: work by default under `~/repos/<host>/`; `~/repos/<host>/ahrzb/` is personal. That switches the git email, the gh account (`~/.config/gh-personal`, also used by git for HTTPS pushes) and the omp profile (`~/.omp/profiles/personal`). Outside `~/repos/<host>/`, git refuses to commit (no global email).
-  * GitHub: `gh auth login` anywhere for the work account, and once more from inside `~/repos/github.com/ahrzb/` for the personal one.
-  * omp: log in once in each place the same way.
+* Identities: work by default under `~/repos/<host>/`; `~/repos/<host>/ahrzb/` is personal. That switches the git email and the omp profile (`~/.omp/profiles/personal`). Outside `~/repos/<host>/`, git refuses to commit (no global email).
+  * GitHub: one personal account everywhere (DataChef uses it too); `gh auth login` once. gh is also git's HTTPS credential helper.
+  * omp: log in once from `~` (work profile) and once from inside `~/repos/github.com/ahrzb/` (personal profile).
   * omp browser relay (lets omp drive your logged-in Chrome tabs): run `omp browser-relay install` from `~`, then in Chrome open `chrome://extensions`, enable *Developer mode*, *Load unpacked* `~/.omp/browser-relay/extension`. One extension serves both profiles; set `omp config set browser.relay true` in each (from `~` and from inside `~/repos/github.com/ahrzb/`).
 * Shell: Ghostty starts a login zsh (environment) that execs nushell. `assume` works in nu too.
 * Projects: DataChef repos use devenv + direnv; run `direnv allow` once per repo.
