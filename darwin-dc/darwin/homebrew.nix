@@ -23,6 +23,7 @@
       "ghostty"
       "google-chrome"
       "helium-browser"
+      # Missive is deployed by Fleet (root-owned); brew bundle fails on the existing app.
       "notion"
       "raycast"
       "slack"
