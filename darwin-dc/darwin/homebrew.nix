@@ -9,8 +9,13 @@
   };
 
   homebrew = {
-    # Work machine: remove undeclared casks but keep their app data.
-    onActivation.cleanup = "uninstall";
+    onActivation = {
+      # Work machine: remove undeclared casks but keep their app data.
+      cleanup = "uninstall";
+      # `brew update` + upgrade on every switch; casks with `auto_updates` are left to their updaters.
+      autoUpdate = true;
+      upgrade = true;
+    };
 
     # Listed so `brew bundle cleanup` doesn't untap it.
     taps = [ "ahrzb/local" ];

@@ -62,6 +62,5 @@ in
       brewfile = true;
       autoUpdate = false;
     };
-    onActivation.autoUpdate = false;
   };
 }
