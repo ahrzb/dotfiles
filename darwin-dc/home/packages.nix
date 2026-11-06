@@ -24,6 +24,9 @@
     go
     nodejs
     pnpm
+    # Shadows Apple's /usr/bin/python3 and pip3 stubs: the Command Line Tools are uninstalled
+    # (their bundled Python 3.9 fails Fleet's vulnerability scan), and agents call both.
+    (python3.withPackages (ps: [ ps.pip ]))
     rustup
     uv
 
