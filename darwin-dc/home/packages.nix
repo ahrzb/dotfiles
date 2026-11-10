@@ -29,8 +29,5 @@
     (python3.withPackages (ps: [ ps.pip ]))
     rustup
     uv
-
-    # DataChef project environments (Inception templates)
-    devenv
   ];
 }

@@ -5,6 +5,9 @@
   identity.default = "work";
 
   programs = {
+    # DataChef project environments (Inception templates). Its cd hook (zsh, nu) spawns
+    # `devenv shell` in projects with a devenv.nix once trusted with `devenv allow`.
+    devenv.enable = true;
     ghostty.enable = true;
     gh.enable = true;
     # `assume <profile>`; generate ~/.aws/config profiles with `granted sso populate`.

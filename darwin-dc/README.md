@@ -30,6 +30,6 @@ sudo ./result/sw/bin/darwin-rebuild switch --flake .#dc-ahrzb-mbp
   * omp: log in once from `~` (work profile) and once from inside `~/repos/github.com/ahrzb/` (personal profile).
   * omp browser relay (lets omp drive your logged-in Chrome tabs): run `omp browser-relay install` from `~`, then in Chrome open `chrome://extensions`, enable *Developer mode*, *Load unpacked* `~/.omp/browser-relay/extension`. One extension serves both profiles; set `omp config set browser.relay true` in each (from `~` and from inside `~/repos/github.com/ahrzb/`).
 * Shell: Ghostty starts a login zsh (environment) that execs nushell. `assume` works in nu too.
-* Projects: DataChef repos use devenv + direnv; run `direnv allow` once per repo.
+* Projects: DataChef repos use devenv. Run `devenv allow` once per repo; then `cd` into it starts `devenv shell` (nushell) and leaving the directory exits it. Don't add a `.envrc` with `use devenv` to those repos, or direnv would load it too. direnv is for flake repos (`use flake`), e.g. this one.
 * No Xcode Command Line Tools: their bundled Python 3.9 fails DataChef's Fleet vulnerability scan. Nix supplies git and python3/pip3; compilers come from devenv shells. If macOS offers to install the Command Line Tools (running `/usr/bin/cc`, `make`, `lldb`, …) or Software Update lists them, decline.
 * Building omp: it isn't in any binary cache, so the first build compiles it (about 15 min on this machine).
