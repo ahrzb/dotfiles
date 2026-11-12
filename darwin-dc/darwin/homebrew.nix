@@ -37,6 +37,7 @@
       "spotify"
       "visual-studio-code"
       "vorssaint"
+      "wispr-flow"
       "zed"
       # Sprinto compliance agent (SOC 2 device checks)
       "ahrzb/local/dr-sprinto"
