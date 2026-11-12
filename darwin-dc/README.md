@@ -22,7 +22,7 @@ sudo ./result/sw/bin/darwin-rebuild switch --flake .#dc-ahrzb-mbp
 #### After first switch
 
 * 1Password: enable *Settings → Developer → Use the SSH agent* and *Integrate with 1Password CLI*. SSH uses the 1Password agent for every host.
-* AWS: `granted sso populate --sso-region <region> <start-url>` writes `~/.aws/config` profiles; switch with `assume <profile>`.
+* AWS: `aws sso login` (one SSO session covers every profile). Profiles live in `home/home.nix` (`programs.awscli`): `default` is the sandbox, `stytch-ro` the read-only internal-automations account. Switch with `assume <profile>` or pass `--profile`.
 * Datadog (`pup`): `pup auth login` (browser OAuth; set `DD_SITE`, e.g. `datadoghq.eu`, if the org isn't on `datadoghq.com`).
 * Google Cloud: `gcloud auth login` and `gcloud auth application-default login`.
 * Google Workspace (`gws`): after gcloud, `gws auth setup` once (creates an OAuth client in a Cloud project), then `gws auth login -s drive,gmail,calendar,sheets,docs`. Credentials are encrypted with a key in the macOS keychain.

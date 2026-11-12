@@ -10,7 +10,35 @@
     devenv.enable = true;
     ghostty.enable = true;
     gh.enable = true;
-    # `assume <profile>`; generate ~/.aws/config profiles with `granted sso populate`.
+    # ~/.aws/config (read-only; edit here, not with `aws configure` or `granted sso populate`).
+    # One SSO session for every profile: `aws sso login` once, then `assume <profile>` or
+    # `--profile`. Roles are the IAM Identity Center permission sets of each account.
+    awscli = {
+      enable = true;
+      settings = {
+        "sso-session datachef" = {
+          sso_start_url = "https://datachef.awsapps.com/start";
+          sso_region = "eu-west-1";
+          sso_registration_scopes = "sso:account:access";
+        };
+        # sandbox-amirhossein.r (aws+sandbox-amirhossein.r@datachef.co)
+        default = {
+          sso_session = "datachef";
+          sso_account_id = "396248155735";
+          sso_role_name = "AdminAccess";
+          region = "eu-west-1";
+        };
+        # internal-automations (aws+automations@datachef.co): read-only, plus the Stytch
+        # Terraform state (iaai-stytch-config).
+        "profile stytch-ro" = {
+          sso_session = "datachef";
+          sso_account_id = "640721796322";
+          sso_role_name = "ReadOnlyWithStytchTfState";
+          region = "eu-west-1";
+        };
+      };
+    };
+    # `assume <profile>` switches the shell to a profile from ~/.aws/config.
     granted.enable = true;
     omp.enable = true;
     k9s.enable = true;
