@@ -23,8 +23,11 @@ sudo ./result/sw/bin/darwin-rebuild switch --flake .#dc-ahrzb-mbp
 
 * 1Password: enable *Settings → Developer → Use the SSH agent* and *Integrate with 1Password CLI*. SSH uses the 1Password agent for every host.
 * AWS: `granted sso populate --sso-region <region> <start-url>` writes `~/.aws/config` profiles; switch with `assume <profile>`.
+* Datadog (`pup`): `pup auth login` (browser OAuth; set `DD_SITE`, e.g. `datadoghq.eu`, if the org isn't on `datadoghq.com`).
 * Google Cloud: `gcloud auth login` and `gcloud auth application-default login`.
 * Google Workspace (`gws`): after gcloud, `gws auth setup` once (creates an OAuth client in a Cloud project), then `gws auth login -s drive,gmail,calendar,sheets,docs`. Credentials are encrypted with a key in the macOS keychain.
+* Notion (`ntn`): `ntn login`.
+* `pup` and `ntn` aren't in nixpkgs; `home/pkgs/` pins their release binaries, so `nix flake update` doesn't bump them. Update `version` and `hash` there by hand (`ntn update` can't write to the Nix store).
 * Identities: work by default under `~/repos/<host>/`; `~/repos/<host>/ahrzb/` is personal. That switches the git email and the omp profile (`~/.omp/profiles/personal`). Outside `~/repos/<host>/`, git refuses to commit (no global email).
   * GitHub: one personal account everywhere (DataChef uses it too); `gh auth login` once. gh is also git's HTTPS credential helper.
   * omp: log in once from `~` (work profile) and once from inside `~/repos/github.com/ahrzb/` (personal profile).

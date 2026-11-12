@@ -11,6 +11,10 @@
     # Google Workspace (Drive, Gmail, Calendar, Sheets, …); `gws auth setup` needs gcloud logged in
     gws
 
+    # Datadog and Notion; official release binaries packaged in ./pkgs (not in nixpkgs)
+    (callPackage ./pkgs/pup.nix { })
+    (callPackage ./pkgs/ntn.nix { })
+
     # IaC
     opentofu
     terraform
